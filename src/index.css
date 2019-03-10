@@ -1,3 +1,8 @@
+html, body, #root, .App {
+  min-height: 100%;
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -14,4 +19,20 @@ div {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.carousel-item-one, .carousel-item, .carousel-inner, .carousel {
+  /* background-image: ('url: http://via.placeholder.com/640x200'); */
+  width: 100%;
+  height: 100%!important;
+  margin: 0;
+}
+
+.carousel-indicators { display: none; }
+
+.carousel-item-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
 }
