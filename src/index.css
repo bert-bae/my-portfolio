@@ -21,18 +21,22 @@ code {
     monospace;
 }
 
-.carousel-item-one, .carousel-item, .carousel-inner, .carousel {
+.carousel-item-container, .carousel-item, .carousel-inner, .carousel {
   /* background-image: ('url: http://via.placeholder.com/640x200'); */
   width: 100%;
-  height: 100%!important;
+  height: 100%;
   margin: 0;
 }
 
 .carousel-indicators { display: none; }
 
-.carousel-item-one {
+.carousel-item-container {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: yellow;
+}
+
+.navbar {
+  background: transparent!important;
 }
