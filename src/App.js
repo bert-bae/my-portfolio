@@ -68,7 +68,7 @@ class App extends Component {
         <Navbar sticky="top" expand="lg" variant="light" bg="light">
           <Navbar.Brand href="#">CodeBert</Navbar.Brand>
         </Navbar>
-        <Container className="section-container">
+        <Container className="section-container" fluid={true}>
           <Col lg={8} sm={12}>
             <h1 className="mainheader">ABOUT ME</h1>
             <p className="content-text">Doggo ipsum very taste wow floofs shoob sub woofer long bois, porgo pupperino. thicc borkdrive. Heckin angery woofer heckin stop it fren shibe most angery pupper I have ever seen, what a nice floof adorable doggo long woofer heckin bork, ur givin me a spook lotsa pats heck. Doge puggo lotsa pats maximum borkdrive fluffer stop it fren, waggy wags lotsa pats aqua doggo heckin good boys doge, floofs big ol pupper long water shoob heckin good boys and girls. Dat tungg tho heckin angery woofer porgo extremely cuuuuuute doge blep, smol sub woofer what a nice floof. Borking doggo smol borking doggo with a long snoot for pats doggo heckin good boys and girls, puggo doge.</p>
@@ -77,13 +77,40 @@ class App extends Component {
             <Pie data={data} options={options} width="300" height="250"/>
           </Col> 
         </Container>
-        <Container className="section-container">
-          <Col className="chartjs-graph" lg={8} sm={12}>
-            <Pie data={data} options={options} width="300" height="250"/>
+        <Container className="section-container" fluid={true}>
+          <Col className="chartjs-graph skills-container" lg={8} sm={12}>
+            <Container className="dev-skill">
+              <Pie data={data} options={options} width="50" height="50"/>
+              <p className="miniheader">SQL</p>
+            </Container>
+            <Container className="dev-skill">
+              <Pie data={data} options={options} width="50" height="50"/>
+              <p className="miniheader">SQL</p>
+            </Container> 
+            <Container className="dev-skill">
+              <Pie data={data} options={options} width="50" height="50"/>
+              <p className="miniheader">SQL</p>
+            </Container> 
+            <Container className="dev-skill">
+              <Pie data={data} options={options} width="50" height="50"/>
+              <p className="miniheader">SQL</p>
+            </Container> 
+            <Container className="dev-skill">
+              <Pie data={data} options={options} width="50" height="50"/>
+              <p className="miniheader">SQL</p>
+            </Container> 
+            <Container className="dev-skill">
+              <Pie data={data} options={options} width="50" height="50"/>
+              <p className="miniheader">SQL</p>
+            </Container> 
+            <Container className="dev-skill">
+              <Pie data={data} options={options} width="50" height="50"/>
+              <p className="miniheader">SQL</p>
+            </Container>
           </Col> 
           <Col lg={4} sm={12}>
             <h1 className="mainheader">DEVELOPER SKILLS</h1>
-            <Row>
+            <Container className="container-row" fluid={true}>
               <ul>
                 <li>SQL</li>
                 <li>SQL</li>
@@ -99,8 +126,23 @@ class App extends Component {
                 <li>SQL</li>
                 <li>SQL</li>
               </ul>
-            </Row>
+            </Container>
           </Col> 
+        </Container>
+        <Container className="section-container container-column" fluid={true}>
+          <h1 className="mainheader">PROJECTS</h1>
+          <Container className="project-container container-row">
+            <Col lg={4} sm={12}>
+              <p className="subheader">Project Name</p>
+            </Col>
+            <Col lg={4} sm={12}>
+              <p className="subheader">Tech Stack</p>
+            </Col>
+            <Col lg={4} sm={12}>
+              <p className="subheader">Images</p>
+              <p className="miniheader">Github URL</p>
+            </Col>
+          </Container>
         </Container>
       </div>
       

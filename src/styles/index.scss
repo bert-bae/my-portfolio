@@ -1,5 +1,6 @@
-$subheader: 26px;
 $mainheader: 32px;
+$subheader: 26px;
+$miniheader: 10px;
 
 body, html, div, span, p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -23,11 +24,22 @@ body, html {
 .section-container {
   display: flex;
   justify-content: space-between;
-  margin: 4em;
+  margin: 6em 0;
+  padding: 0 80px!important;
 }
 
+.container-row {
+  display: flex;
+  flex-direction: row!important;
+}
+
+.container-column {
+  display: flex;
+  flex-direction: column!important;
+}
 .mainheader {
   font-size: $mainheader;
+  display: inline-block;
   margin: 1em 0 1em 0;
 }
 
@@ -36,6 +48,19 @@ body, html {
   margin-bottom: 0.5em;
 }
 
+.miniheader {
+  font-size: $miniheader;
+}
 .chartjs-graph {
   align-self: center;
+  display: flex;
+  justify-content: center;
+  .dev-skill {
+    margin: 0.5em;
+    text-align: center;
+  }
+}
+
+.skills-container {
+  padding-right: 40px!important;
 }
