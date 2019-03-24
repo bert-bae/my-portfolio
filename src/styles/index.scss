@@ -64,3 +64,26 @@ body, html {
 .skills-container {
   padding-right: 40px!important;
 }
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-rotate {
+  -webkit-animation: rotateY 1s 0s linear;
+  animation: rotateY 1s 0s linear;
+}
+
+.circle-rotate-slow {
+  -webkit-animation: rotateY 1.3s 0s linear;
+  animation: rotateY 1.3s 0s linear;
+}
+
+@-webkit-keyframes rotateY {
+  to { -webkit-transform: rotateY(360deg); }
+}
+@keyframes rotateY {
+  to { transform: rotateY(360deg); }
+}
