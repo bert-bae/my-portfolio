@@ -58,16 +58,20 @@ export default class Home extends Component {
       <div className="App">
         <Container className="section-container center" fluid={true}>
           <Col className="center" lg={4} md={12} sm={12}>
-            <span className="fa-stack fa-2x fa-4x">
-              <i className="circle-rotate fas fa-circle-notch fa-stack-2x"></i>
-              <i className="circle-rotate-slow fab fa-github fa-stack-1x"></i>
-            </span>
+            <a href="https://github.com/bert-bae">
+              <span className="fa-stack fa-2x fa-4x">
+                <i className="circle-rotate fas fa-circle-notch fa-stack-2x"></i>
+                <i className="circle-rotate-slow fab fa-github fa-stack-1x"></i>
+              </span>
+            </a>
           </Col>
           <Col className="center" lg={4} md={12} sm={12}>
+          <a href="https://www.linkedin.com/in/bert92/">
             <span className="fa-stack fa-2x fa-4x">
               <i className="circle-rotate fas fa-circle-notch fa-stack-2x"></i>
               <i className="circle-rotate-slow fab fa-linkedin-in fa-stack-1x"></i>
             </span>
+          </a>
           </Col>
           <Col className="center" lg={4} md={12} sm={12}>
             <span className="fa-stack fa-2x fa-4x">
@@ -78,5 +82,5 @@ export default class Home extends Component {
         </Container>
       </div>
     )
-  }
+  } 
 }
