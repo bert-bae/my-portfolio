@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import './App.css';
+import './index.css';
 
 import Header from './components/Header'
 import Home from './components/Home';

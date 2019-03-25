@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Button, Container, Row, Col, Navbar, Carousel, Jumbotron } from 'react-bootstrap';
+import { Container, Col } from 'react-bootstrap';
 
 export default class Resume extends Component {
   constructor(props) {

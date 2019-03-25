@@ -1,3 +1,34 @@
+.navigation {
+  display: flex;
+  justify-content: flex-end !important;
+}
+.navigation a {
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.nav-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: black solid 2px;
+  border-radius: 25px;
+  width: 80px;
+  height: 30px;
+}
+
+.nav-button:hover {
+  background-color: black;
+  color: white;
+  transition: 0.1s linear;
+}
+
+.active {
+  color: white !important;
+  background-color: black !important;
+}
+
 body, html, div, span, p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -15,6 +46,11 @@ body, html {
   background-image: url("/images/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+a {
+  margin: 14px;
+  text-decoration: none !important;
 }
 
 .section-container {

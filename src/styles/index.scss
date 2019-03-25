@@ -1,6 +1,9 @@
 $mainheader: 32px;
 $subheader: 26px;
 $miniheader: 10px;
+$button_text_color: #fff;
+
+@import './comp/navigation.scss';
 
 body, html, div, span, p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -19,6 +22,11 @@ body, html {
   background-image: url('/images/background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+a {
+  margin: 14px;
+  text-decoration: none!important;
 }
 
 .section-container {

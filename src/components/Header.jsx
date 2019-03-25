@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-import { Navbar } from 'react-bootstrap';
+import { Navbar, Container } from 'react-bootstrap';
 
 export default class Header extends Component {
   constructor(props) {
@@ -11,10 +11,12 @@ export default class Header extends Component {
     return (
       <Navbar sticky="top" expand="lg" variant="light" bg="light">
         <Navbar.Brand href="#">CodeBert</Navbar.Brand>
-        <Link to="/">Home</Link>
-        <Link to="/projects">Projects</Link>
-        <Link to="/resume">Resume</Link>
-        <Link to="/about">About</Link>
+        <Container className="navigation" fluid={true}>
+          <NavLink className="nav-button" exact activeClassName="active" to="/">Home</NavLink>
+          <NavLink className="nav-button" activeClassName="active" to="/projects">Projects</NavLink>
+          <NavLink className="nav-button" activeClassName="active" to="/resume">Resume</NavLink>
+          <NavLink className="nav-button" activeClassName="active" to="/about">About</NavLink>
+        </Container>
       </Navbar>
     );
   }

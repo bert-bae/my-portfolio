@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { Bar, Pie } from 'react-chartjs';
-import { BrowserRouter, Route, Link } from "react-router-dom";
-
-import { Button, Container, Row, Col, Navbar, Carousel, Jumbotron } from 'react-bootstrap';
+import { Pie } from 'react-chartjs';
+import { Container, Col } from 'react-bootstrap';
 
 export default class About extends Component {
   constructor(props) {

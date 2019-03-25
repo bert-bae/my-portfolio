@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Bar, Pie } from 'react-chartjs';
-import { Button, Container, Row, Col, Navbar, Carousel, Jumbotron } from 'react-bootstrap';
+import { Container, Col } from 'react-bootstrap';
 
 export default class Home extends Component {
   constructor(props) {
