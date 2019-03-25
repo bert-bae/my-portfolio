@@ -43,42 +43,46 @@
   width: 100%;
   margin: 1.5em auto !important;
 }
-.image-container .home-image1 {
+.image-container .container-column {
+  padding: 0;
+  margin: 0;
+}
+.image-container img:nth-child(1) {
   -moz-animation: fadein 0.5s;
   -webkit-animation: fadein 0.5s;
   animation: fadein 0.5s;
 }
-.image-container .home-image2 {
+.image-container img:nth-child(2) {
   -moz-animation: fadein 0.8s;
   -webkit-animation: fadein 0.8s;
   animation: fadein 0.8s;
 }
-.image-container .home-image3 {
+.image-container img:nth-child(3) {
   -moz-animation: fadein 1.1s;
   -webkit-animation: fadein 1.1s;
   animation: fadein 1.1s;
 }
-.image-container .home-image4 {
+.image-container img:nth-child(4) {
   -moz-animation: fadein 1.4s;
   -webkit-animation: fadein 1.4s;
   animation: fadein 1.4s;
 }
-.image-container .home-image5 {
+.image-container img:nth-child(5) {
   -moz-animation: fadein 1.7s;
   -webkit-animation: fadein 1.7s;
   animation: fadein 1.7s;
 }
-.image-container .home-image6 {
+.image-container img:nth-child(6) {
   -moz-animation: fadein 2s;
   -webkit-animation: fadein 2s;
   animation: fadein 2s;
 }
-.image-container .home-image7 {
+.image-container img:nth-child(7) {
   -moz-animation: fadein 2.3s;
   -webkit-animation: fadein 2.3s;
   animation: fadein 2.3s;
 }
-.image-container .home-image8 {
+.image-container img:nth-child(8) {
   -moz-animation: fadein 2.6s;
   -webkit-animation: fadein 2.6s;
   animation: fadein 2.6s;
@@ -142,15 +146,11 @@ a {
 
 .container-row {
   display: flex;
-  padding: 0;
-  margin: 0;
   flex-direction: row !important;
 }
 
 .container-column {
   display: flex;
-  padding: 0;
-  margin: 0;
   flex-direction: column !important;
 }
 

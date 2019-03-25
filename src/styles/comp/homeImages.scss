@@ -2,42 +2,46 @@
   height: auto;
   width: 100%;
   margin: 1.5em auto!important;
-  .home-image1 {
+  .container-column {
+    padding: 0;
+    margin: 0;
+  }
+  img:nth-child(1) {
     -moz-animation: fadein 0.5s;
     -webkit-animation: fadein 0.5s;
     animation: fadein 0.5s;
   }
-  .home-image2 {
+  img:nth-child(2) {
     -moz-animation: fadein 0.8s;
     -webkit-animation: fadein 0.8s;
     animation: fadein 0.8s;
   }
-  .home-image3 {
+  img:nth-child(3) {
     -moz-animation: fadein 1.1s;
     -webkit-animation: fadein 1.1s;
     animation: fadein 1.1s;
   }
-  .home-image4 {
+  img:nth-child(4) {
     -moz-animation: fadein 1.4s;
     -webkit-animation: fadein 1.4s;
     animation: fadein 1.4s;
   }
-  .home-image5 {
+  img:nth-child(5) {
     -moz-animation: fadein 1.7s;
     -webkit-animation: fadein 1.7s;
     animation: fadein 1.7s;
   }
-  .home-image6 {
+  img:nth-child(6) {
     -moz-animation: fadein 2s;
     -webkit-animation: fadein 2s;
     animation: fadein 2s;
   }
-  .home-image7 {
+  img:nth-child(7) {
     -moz-animation: fadein 2.3s;
     -webkit-animation: fadein 2.3s;
     animation: fadein 2.3s;
   }
-  .home-image8 {
+  img:nth-child(8) {
     -moz-animation: fadein 2.6s;
     -webkit-animation: fadein 2.6s;
     animation: fadein 2.6s;
