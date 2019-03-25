@@ -6,74 +6,41 @@ export default class Home extends Component {
     super(props);
   }
   render() {
-    let data = [
-      {
-        value: 300,
-        color:"#F7464A",
-        highlight: "#FF5A5E",
-        label: "Red"
-      },
-      {
-        value: 50,
-        color: "#46BFBD",
-        highlight: "#5AD3D1",
-        label: "Green"
-      },
-      {
-        value: 100,
-        color: "#FDB45C",
-        highlight: "#FFC870",
-        label: "Yellow"
-      }
-    ];
-    let options = {
-      //Boolean - Whether we should show a stroke on each segment
-      segmentShowStroke : true,
-    
-      //String - The colour of each segment stroke
-      segmentStrokeColor : "#fff",
-    
-      //Number - The width of each segment stroke
-      segmentStrokeWidth : 2,
-    
-      //Number - The percentage of the chart that we cut out of the middle
-      percentageInnerCutout : 50, // This is 0 for Pie charts
-    
-      //Number - Amount of animation steps
-      animationSteps : 200,
-    
-      //String - Animation easing effect
-      animationEasing : "easeOutBounce",
-    
-      //Boolean - Whether we animate the rotation of the Doughnut
-      animateRotate : true,
-    
-      //Boolean - Whether we animate scaling the Doughnut from the centre
-      animateScale : false,
-      //String - A legend template
-      legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"><%if(segments[i].label){%><%=segments[i].label%><%}%></span></li><%}%></ul>"
-    };
     return (
       <div className="App">
+        <Container className="image-container container-row">
+          <Col className="container-column" lg={6}>
+            <img src="/images/home1.jpg" className="home-image1" alt="Image Part 1"></img>
+            <img src="/images/home3.jpg" className="home-image3" alt="Image Part 3"></img>
+            <img src="/images/home5.jpg" className="home-image5" alt="Image Part 5"></img>
+            <img src="/images/home7.jpg" className="home-image7" alt="Image Part 7"></img>
+          </Col>
+          <Col className="container-column" lg={6}>
+            <img src="/images/home2.jpg" className="home-image2" alt="Image Part 2"></img>
+            <img src="/images/home4.jpg" className="home-image4" alt="Image Part 4"></img>
+            <img src="/images/home6.jpg" className="home-image6" alt="Image Part 6"></img>
+            <img src="/images/home8.jpg" className="home-image8" alt="Image Part 8"></img>
+          </Col>
+        </Container>
         <Container className="section-container center" fluid={true}>
-          <Col className="center" lg={4} md={12} sm={12}>
+          <Col className="center" lg={4} md={4} sm={4}>
             <a href="https://github.com/bert-bae">
-              <span className="fa-stack fa-2x fa-4x">
+              <span className="fa-stack fa-2x fa-2x">
                 <i className="circle-rotate fas fa-circle-notch fa-stack-2x"></i>
                 <i className="circle-rotate-slow fab fa-github fa-stack-1x"></i>
               </span>
             </a>
           </Col>
-          <Col className="center" lg={4} md={12} sm={12}>
+          <Col className="center" lg={4} md={4} sm={4}>
           <a href="https://www.linkedin.com/in/bert92/">
-            <span className="fa-stack fa-2x fa-4x">
+            <span className="fa-stack fa-2x fa-2x">
               <i className="circle-rotate fas fa-circle-notch fa-stack-2x"></i>
               <i className="circle-rotate-slow fab fa-linkedin-in fa-stack-1x"></i>
             </span>
           </a>
           </Col>
-          <Col className="center" lg={4} md={12} sm={12}>
-            <span className="fa-stack fa-2x fa-4x">
+          <Col className="center" lg={4} md={4} sm={4}>
+            <span className="fa-stack fa-2x fa-2x">
               <i className="circle-rotate fas fa-circle-notch fa-stack-2x"></i>
               <i className="circle-rotate-slow fas fa-user-circle fa-stack-1x"></i>
             </span>

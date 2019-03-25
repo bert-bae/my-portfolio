@@ -38,10 +38,81 @@
   background-color: black !important;
 }
 
+.image-container {
+  height: auto;
+  width: 100%;
+  margin: 1.5em auto !important;
+}
+.image-container .home-image1 {
+  -moz-animation: fadein 0.5s;
+  -webkit-animation: fadein 0.5s;
+  animation: fadein 0.5s;
+}
+.image-container .home-image2 {
+  -moz-animation: fadein 0.8s;
+  -webkit-animation: fadein 0.8s;
+  animation: fadein 0.8s;
+}
+.image-container .home-image3 {
+  -moz-animation: fadein 1.1s;
+  -webkit-animation: fadein 1.1s;
+  animation: fadein 1.1s;
+}
+.image-container .home-image4 {
+  -moz-animation: fadein 1.4s;
+  -webkit-animation: fadein 1.4s;
+  animation: fadein 1.4s;
+}
+.image-container .home-image5 {
+  -moz-animation: fadein 1.7s;
+  -webkit-animation: fadein 1.7s;
+  animation: fadein 1.7s;
+}
+.image-container .home-image6 {
+  -moz-animation: fadein 2s;
+  -webkit-animation: fadein 2s;
+  animation: fadein 2s;
+}
+.image-container .home-image7 {
+  -moz-animation: fadein 2.3s;
+  -webkit-animation: fadein 2.3s;
+  animation: fadein 2.3s;
+}
+.image-container .home-image8 {
+  -moz-animation: fadein 2.6s;
+  -webkit-animation: fadein 2.6s;
+  animation: fadein 2.6s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 body, html, div, span, p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
   color: #fff;
+  font-family: "Roboto Slab", serif;
 }
 
 body, html {
@@ -65,17 +136,21 @@ a {
 .section-container {
   display: flex;
   justify-content: space-between;
-  margin: 6em 0;
+  margin: 2em 0;
   padding: 0 80px !important;
 }
 
 .container-row {
   display: flex;
+  padding: 0;
+  margin: 0;
   flex-direction: row !important;
 }
 
 .container-column {
   display: flex;
+  padding: 0;
+  margin: 0;
   flex-direction: column !important;
 }
 
