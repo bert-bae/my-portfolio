@@ -10,7 +10,7 @@ export default class Header extends Component {
   render() {
     return (
       <Navbar sticky="top" expand="lg" variant="light" bg="light">
-        <Navbar.Brand href="#">CodeBert</Navbar.Brand>
+        <Navbar.Brand className="nav-logo" href="#">CODEBERT</Navbar.Brand>
         <Container className="navigation" fluid={true}>
           <NavLink className="nav-button" exact activeClassName="active" to="/">Home</NavLink>
           <NavLink className="nav-button" activeClassName="active" to="/projects">Projects</NavLink>
