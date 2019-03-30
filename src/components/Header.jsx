@@ -9,7 +9,7 @@ export default class Header extends Component {
   }
   render() {
     return (
-      <Navbar sticky="top" expand="lg" variant="light" bg="light">
+      <Navbar className="nav-container" sticky="top" expand="lg" variant="light" bg="light">
         <Navbar.Brand className="nav-logo" href="#">CODEBERT</Navbar.Brand>
         <Container className="navigation" fluid={true}>
           <NavLink className="nav-button" exact activeClassName="active" to="/">Home</NavLink>
