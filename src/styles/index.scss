@@ -1,5 +1,6 @@
 $mainheader: 32px;
 $subheader: 26px;
+$sectionheader: 16px;
 $miniheader: 10px;
 $background-color: #FDFDFF;
 $navbar-color: #90AFBC;
@@ -74,6 +75,11 @@ a {
 
 .subheader {
   font-size: $subheader;
+  margin-bottom: 0.5em;
+}
+
+.sectionheader {
+  font-size: $sectionheader;
   margin-bottom: 0.5em;
 }
 

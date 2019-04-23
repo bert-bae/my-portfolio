@@ -181,6 +181,11 @@ a {
   margin-bottom: 0.5em;
 }
 
+.sectionheader {
+  font-size: 16px;
+  margin-bottom: 0.5em;
+}
+
 .miniheader {
   font-size: 10px;
 }
