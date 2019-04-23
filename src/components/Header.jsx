@@ -7,7 +7,7 @@ export default class Header extends Component {
   constructor(props) {
     super(props);
   }
-  render() {
+  render() { 
     return (
       <Navbar className="nav-container" sticky="top" expand="lg" variant="light" bg="light">
         <Navbar.Brand className="nav-logo" href="#">CODEBERT</Navbar.Brand>

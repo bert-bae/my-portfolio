@@ -61,6 +61,11 @@ a {
   display: flex;
   flex-direction: column!important;
 }
+
+.subsection {
+  margin-bottom: 35px;
+}
+
 .mainheader {
   font-size: $mainheader;
   display: inline-block;
