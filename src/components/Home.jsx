@@ -11,11 +11,11 @@ export default class Home extends Component {
         <Container className="contact-container">
           <Container className="section-container container-column">
             <p className="sectionheader">Personal Email</p>
-            <p className="content-text">elbert.bae@gmail.com</p>
+            <a className="content-text" href="mailto:elbert.bae@gmail.com?Subject=Mail%20from%20CodeBert">elbert.bae@gmail.com</a>
           </Container>
           <Container className="section-container container-column">
             <p className="sectionheader">Work Email</p>
-            <p className="content-text">elbert@colinkz.com</p>
+            <a className="content-text" href="mailto:elbert@colinkz.com?Subject=Tell%20me%20about%20Colinkz!">elbert@colinkz.com</a>
           </Container>
           <Container className="section-container container-column">
             <p className="sectionheader">Phone</p>

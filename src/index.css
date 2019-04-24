@@ -161,6 +161,7 @@ a {
 }
 .home-container i, .home-container .profile-icons {
   color: black;
+  cursor: pointer;
 }
 .home-container .outline {
   border: 1px solid black;
@@ -230,18 +231,25 @@ a {
     opacity: 1;
   }
 }
-.contact-container .section-container {
-  padding: 0 !important;
-}
-
 #contact-popover {
   border: black 1px solid;
   background-color: #FDFDFF;
+  margin: 0;
+}
+#contact-popover .contact-container .section-container {
+  padding: 0 !important;
+  margin: 10px;
+}
+#contact-popover .contact-container .content-text {
+  margin: 10px;
 }
 #contact-popover .popover-header {
   background-color: black;
   font-family: "Roboto Slab", serif;
   color: #FFF;
+}
+#contact-popover .arrow::before, #contact-popover .arrow::after {
+  display: none;
 }
 
 /*# sourceMappingURL=index.css.map */

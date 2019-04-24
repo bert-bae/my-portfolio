@@ -1,15 +1,22 @@
-.contact-container {
-  .section-container {
-    padding: 0!important;
-  }
-}
-
 #contact-popover {
   border: $popover-border-color 1px solid;
   background-color: $background-color;
+  margin: 0;
+  .contact-container {
+    .section-container {
+      padding: 0!important;
+      margin: 10px;
+    }
+    .content-text {
+      margin: 10px;
+    }
+  }
   .popover-header {
     background-color: $popover-border-color;
     font-family: $header-font-style;
     color: #FFF;
+  }
+  .arrow::before, .arrow::after {
+    display: none;
   }
 }
