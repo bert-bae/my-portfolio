@@ -112,6 +112,7 @@ a {
 }
 .nav-container {
   background-color: #90AFBC !important;
+  position: relative;
 }
 
 .navigation {
@@ -249,6 +250,36 @@ a {
   color: #FFF;
 }
 #contact-popover .arrow::before, #contact-popover .arrow::after {
+  display: none;
+}
+
+.sql-trigger {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  color: #FFF;
+  background-color: red;
+  width: 100px;
+  height: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#sql-popover {
+  border: black 1px solid;
+  background-color: #FDFDFF;
+  margin-left: 30px;
+}
+#sql-popover .popover-header {
+  background-color: black;
+  font-family: "Roboto Slab", serif;
+  color: #FFF;
+}
+#sql-popover .arrow::before, #sql-popover .arrow::after, #sql-popover .arrow {
   display: none;
 }
 

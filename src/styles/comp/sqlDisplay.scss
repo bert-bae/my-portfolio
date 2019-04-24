@@ -1,0 +1,29 @@
+.sql-trigger {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  color: #FFF;
+  background-color: red;
+  width: 100px;
+  height: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#sql-popover {
+  border: $popover-border-color 1px solid;
+  background-color: $background-color;
+  margin-left: 30px;;
+  .popover-header {
+    background-color: $popover-border-color;
+    font-family: $header-font-style;
+    color: #FFF;
+  }
+  .arrow::before, .arrow::after, .arrow {
+    display: none;
+  }
+}
