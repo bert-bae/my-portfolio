@@ -1,0 +1,15 @@
+.contact-container {
+  .section-container {
+    padding: 0!important;
+  }
+}
+
+#contact-popover {
+  border: $popover-border-color 1px solid;
+  background-color: $background-color;
+  .popover-header {
+    background-color: $popover-border-color;
+    font-family: $header-font-style;
+    color: #FFF;
+  }
+}
