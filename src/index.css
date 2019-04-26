@@ -158,7 +158,6 @@ a {
 .home-container {
   height: calc(100% - 74px);
   width: 100%;
-  overflow-y: hidden;
 }
 .home-container i, .home-container .profile-icons {
   color: black;
@@ -168,44 +167,94 @@ a {
   border: 1px solid black;
   padding: 0;
 }
-.home-container .home-images {
-  height: 50%;
-  width: 90%;
+
+.home-images {
+  height: 300px;
+  width: 100%;
   padding: 0;
   display: flex;
   flex-direction: row;
 }
-.home-container .image-one {
+
+.img-overflow {
+  overflow: hidden;
+}
+
+.img-overflow:nth-child(1) {
   height: 100%;
   width: 33%;
 }
-.home-container .image-two, .home-container .image-three {
-  height: 50%;
-}
-.home-container .image-column {
-  width: 66%;
-}
 
-.home-images {
-  margin-top: 32px;
+.image-column {
+  width: 66%;
+  padding: 0;
+  margin-right: 0;
+}
+.image-column .img-overflow:nth-child(1) {
+  height: calc(50% - 2.5px);
+  width: 100%;
+  margin-bottom: 5px;
+}
+.image-column .img-overflow:nth-child(2) {
+  height: calc(50% - 2.5px);
+  width: 100%;
 }
 
 .image-one {
+  background-image: url("/images/home-img1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  position: relative;
   -moz-animation: fadein 1s;
   -webkit-animation: fadein 1s;
   animation: fadein 1s;
 }
 
 .image-two {
+  background-image: url("/images/home-img2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  margin-bottom: 5px;
+  position: relative;
   -moz-animation: fadein 2s;
   -webkit-animation: fadein 2s;
   animation: fadein 2s;
 }
 
 .image-three {
+  background-image: url("/images/home-img3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  position: relative;
   -moz-animation: fadein 3s;
   -webkit-animation: fadein 3s;
   animation: fadein 3s;
+}
+
+.home-img::before {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black !important;
+  opacity: 0.5;
+}
+
+.home-img {
+  height: 100%;
+  width: 100%;
+}
+
+.home-img:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: all 0.5s;
 }
 
 @keyframes fadein {

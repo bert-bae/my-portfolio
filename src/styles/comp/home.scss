@@ -1,7 +1,6 @@
 .home-container {
   height: calc(100% - 74px);
   width: 100%;
-  overflow-y: hidden;
   i, .profile-icons {
     color: black;
     cursor: pointer;
@@ -10,26 +9,5 @@
   .outline {
     border: 1px solid black;
     padding: 0;
-  }
-
-  .home-images {
-    height: 50%;
-    width: 90%;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-  }
-
-  .image-one {
-    height: 100%;
-    width: 33%;
-  }
-
-  .image-two, .image-three {
-    height: 50%;
-  }
-
-  .image-column {
-    width: 66%;
   }
 }

@@ -1,25 +1,89 @@
 .home-images {
-  margin-top: 32px;
+  height: 300px;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.img-overflow {
+  overflow:hidden;
+}
+.img-overflow:nth-child(1) {
+  height: 100%;
+  width: 33%;
+}
+.image-column {
+  width: 66%;
+  padding: 0;
+  margin-right: 0;
+  .img-overflow:nth-child(1) {
+    height: calc(50% - 2.5px);
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .img-overflow:nth-child(2) {
+    height: calc(50% - 2.5px);
+    width: 100%;
+  }
 }
 
 .image-one {
+  background-image: url('/images/home-img1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  position: relative;
   -moz-animation: fadein 1s;
   -webkit-animation: fadein 1s;
   animation: fadein 1s;
 }
 
 .image-two {
+  background-image: url('/images/home-img2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  margin-bottom: 5px;
+  position: relative;
   -moz-animation: fadein 2s;
   -webkit-animation: fadein 2s;
   animation: fadein 2s;
 }
 
 .image-three {
+  background-image: url('/images/home-img3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  position: relative;
   -moz-animation: fadein 3s;
   -webkit-animation: fadein 3s;
   animation: fadein 3s;
 }
 
+.home-img::before {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black!important;
+  opacity: 0.5;
+}
+
+.home-img {
+  height: 100%;
+  width: 100%;
+}
+
+.home-img:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: all .5s;
+}
 
 @keyframes fadein {
   from { opacity: 0; }

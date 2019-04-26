@@ -40,7 +40,7 @@ export default class Header extends Component {
           <NavLink className="nav-button" onClick={() => { pageIndicator("about")}} activeClassName="active" to="/about">About</NavLink>
         </Container>
         <OverlayTrigger 
-          trigger="click" 
+          trigger={['click', 'hover']} // Hover for desktop, click for mobile
           placement="right" 
           overlay={sqlCode}>
           <div className="sql-trigger">

@@ -27,13 +27,19 @@ export default class Home extends Component {
     return (
       <div className="home-container">
         <Container className="home-images" fluid={true}>
-          <Container className="outline image-one">
-          </Container>
-          <Container className="outline image-column">
-            <Container className="outline image-two">
+          <div className="img-overflow">
+            <Container className="home-img image-one">
             </Container>
-            <Container className="outline image-three">
-            </Container>
+          </div>
+          <Container className="image-column">
+            <div className="img-overflow">
+              <Container className="home-img image-two">
+              </Container>
+            </div>
+            <div className="img-overflow">
+              <Container className="home-img image-three">
+              </Container>
+            </div>
           </Container>
         </Container>
         <Container className="section-container center" fluid={true}>
