@@ -189,7 +189,7 @@ a {
 .image-column {
   width: 66%;
   padding: 0;
-  margin-right: 0;
+  margin: 0 0 0 5px;
 }
 .image-column .img-overflow:nth-child(1) {
   height: calc(50% - 2.5px);
@@ -280,6 +280,21 @@ a {
   }
   to {
     opacity: 1;
+  }
+}
+@media only screen and (max-width: 568px) {
+  .home-images {
+    flex-direction: column;
+    height: 500px;
+  }
+  .home-images .img-overflow {
+    height: 33%;
+    width: 100%;
+  }
+  .home-images .image-column {
+    height: 66%;
+    width: 100%;
+    margin: 5px 0 0 0;
   }
 }
 #contact-popover {
