@@ -1,0 +1,46 @@
+.card-container {
+  height: 300px;
+  width: 230px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  overflow: hidden;
+  .card-overflow {
+    height: 50%;
+    width: 100%;
+    overflow: hidden;
+    .card-image {
+      height: 100%;
+      width: 100%;
+      background-image: url('/images/home-img1.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      position: relative;
+    }
+    .card-image::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: black;
+      opacity: 0.5;
+      content: "";
+    }
+    .card-image:hover {
+      transform: scale(1.2);
+      transition: all 0.5s;
+    }
+  }
+  .card-content {
+    padding: 9px;
+    .card-title {
+      font-size: $sectionheader;
+      font-family: $header_font_style;
+      font-weight: bolder
+    }
+    .card-description {
+      font-size: $main-font-size;
+    }
+  }
+}

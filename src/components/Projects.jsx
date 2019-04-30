@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import { Container, Col } from 'react-bootstrap';
 
+import ImageCard from './ImageCard';
+
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -22,6 +24,7 @@ export default class App extends Component {
             <p className="miniheader">Github URL</p>
           </Col>
         </Container>
+        <ImageCard/>
       </Container>
     )
   }

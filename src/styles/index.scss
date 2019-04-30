@@ -1,6 +1,7 @@
 $mainheader: 32px;
 $subheader: 26px;
 $sectionheader: 16px;
+$main-font-size: 14px;
 $miniheader: 10px;
 $background-color: #FDFDFF;
 $navbar-color: #90AFBC;
@@ -10,6 +11,13 @@ $tertiary-color: #99E1B1;
 $border-color: #C0C0C0;
 $button_text_color: black;
 $header_font_style: 'Roboto Slab', serif;
+
+@mixin background-image($url, $size, $repeat, $position) {
+  background-image: url($url);
+  background-size: $size;
+  background-repeat: $repeat;
+  background-position: $position;
+}
 
 body, html, div, span, p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -126,3 +134,4 @@ a {
 @import './comp/homeImages.scss';
 @import './comp/contactCard.scss';
 @import './comp/sqlDisplay.scss';
+@import './comp/imageCard.scss';
