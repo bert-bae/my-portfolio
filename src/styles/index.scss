@@ -38,13 +38,19 @@ body, html, div, span, p, h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto Slab', serif;
 }
 
-#root, .App {
+#root, .App, .background-container {
   height: 100%;
   min-height: 100%;
   width: 100%;
   min-width: 100%;
   margin: 0;
   padding: 0;
+}
+
+.background-container {
+  width: 90%;
+  max-width: 1280px;
+  padding: 0 100px;
 }
 
 body, html {
@@ -66,9 +72,12 @@ a {
 .section-container {
   display: flex;
   justify-content: space-between;
-  margin: 2em auto;
+  margin: 0 auto;
+  padding: 50px 15px;
   width: 90%;
+  height: auto;
   max-width: 1280px;
+  box-shadow: 0 0 12px rgba(0, 0, 0.3);
 }
 
 .container-row {
