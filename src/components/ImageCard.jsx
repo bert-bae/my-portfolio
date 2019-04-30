@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 
-export default function ImageCard() {
-  let title = "Title goes here";
-  let description = "Description goes here";
+export default function ImageCard({title, description, imgSrc}) {
   return (
     <div className="card-container">
       <div className="card-overflow">
-        <div className="card-image"></div>
+        <div className="card-image" style={{backgroundImage: `url(${imgSrc})`}}></div>
       </div>
       <div className="card-content">
         <p className="card-title">{title}</p>
