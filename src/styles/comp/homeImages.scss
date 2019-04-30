@@ -7,52 +7,36 @@
 }
 
 .img-overflow {
-  overflow:hidden;
-}
-.img-overflow:nth-child(1) {
   height: 100%;
-  width: 33%;
-}
-.image-column {
-  width: 66%;
+  width: 100%;
   padding: 0;
-  margin: 0 0 0 5px;
-  .img-overflow:nth-child(1) {
-    height: calc(50% - 2.5px);
-    width: 100%;
-    margin-bottom: 5px;
-  }
-  .img-overflow:nth-child(2) {
-    height: calc(50% - 2.5px);
-    width: 100%;
-  }
-}
-
-.image-one {
-  background-image: url('/images/home-img1.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50%;
+  overflow:hidden;
   position: relative;
-  -moz-animation: fadein 1s;
-  -webkit-animation: fadein 1s;
-  animation: fadein 1s;
+  .photo-credit {
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    z-index: 10;
+    text-align: start;
+    p.miniheader, a.miniheader {
+      margin: 0!important;
+      color: #FFF;
+    }
+  }
 }
 
-.image-two {
-  background-image: url('/images/home-img2.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50%;
-  margin-bottom: 5px;
-  position: relative;
-  -moz-animation: fadein 2s;
-  -webkit-animation: fadein 2s;
-  animation: fadein 2s;
+.img-overflow:hover {
+  .photo-credit {
+    display:block;
+    -moz-animation: fadein 0.5s;
+    -webkit-animation: fadein 0.5s;
+    animation: fadein 0.5s;
+  }
 }
 
-.image-three {
-  background-image: url('/images/home-img3.jpg');
+.home-jumbo {
+  background-image: url('/images/home-jumbo.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50%;
@@ -60,9 +44,14 @@
   -moz-animation: fadein 3s;
   -webkit-animation: fadein 3s;
   animation: fadein 3s;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
-.home-img::before {
+.home-jumbo::before {
   position: absolute;
   display: block;
   content: "";
@@ -74,28 +63,10 @@
   opacity: 0.5;
 }
 
-.home-img {
-  height: 100%;
-  width: 100%;
-}
-
-.home-img:hover {
+.home-jumbo:hover {
   cursor: pointer;
   transform: scale(1.2);
   transition: all .5s;
-}
-
-@keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-@-moz-keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-@-webkit-keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
 }
 
 @media only screen and (max-width: 568px) {

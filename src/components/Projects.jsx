@@ -24,7 +24,10 @@ export default class App extends Component {
             <p className="miniheader">Github URL</p>
           </Col>
         </Container>
-        <ImageCard title={"hello"} description={"description"} imgSrc={"/images/home-img1.jpg"}/>
+        {/* <ImageCard title={"hello"} 
+          description={"description"} 
+          imgSrc={"/images/home-img1.jpg"} 
+          projectUrl={"https://www.github.com"}/> */}
       </Container>
     )
   }
