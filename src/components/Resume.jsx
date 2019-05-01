@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-
 import { Container, Col } from 'react-bootstrap';
+
+import Jumbotron from './Jumbotron';
 
 export default class Resume extends Component {
   constructor(props) {
@@ -9,6 +10,7 @@ export default class Resume extends Component {
   render() {
     return (
       <div className="App">
+        <Jumbotron imageSrc={"/images/home-jumbo.jpg"} photoBy={"PHOTOGRAPHER"} imageUrl={"#"}/>
         <Container className="section-container container-column" fluid={true}>
           <h1 className="mainheader">RESUME</h1>
           <Col className="subsection" lg={12} sm={12}>

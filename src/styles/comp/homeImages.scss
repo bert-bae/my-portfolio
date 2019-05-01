@@ -36,14 +36,13 @@
 }
 
 .home-jumbo {
-  background-image: url('/images/home-jumbo.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50%;
   position: relative;
-  -moz-animation: fadein 3s;
-  -webkit-animation: fadein 3s;
-  animation: fadein 3s;
+  -moz-animation: fadein 1.5s;
+  -webkit-animation: fadein 1.5s;
+  animation: fadein 1.5s;
   height: 100%;
   width: 100%;
   display: flex;

@@ -1,44 +1,76 @@
-.nav-container {
-  background-color: $navbar-color!important;
-  position: relative;
-}
-
-.navigation {
-  display: flex;
-  justify-content: flex-end!important;
-  a {
-    color: black;
-    font-size: 14px;
-    font-weight: bold;
-    font-family: 'Roboto Slab', serif;
+// Scrolled header styling
+.nav-container.scrolled {
+  background-color: #FFF!important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  .nav-logo {
+    color: black!important;
+  }
+  .navigation {
+    a {
+      color: black;
+    }
+    .nav-button {
+      border: 2px black solid;
+    }
+    .nav-button:hover {
+      background-color: black;
+      color:white;
+    }
   }
 }
 
-.nav-logo {
-  font-family: 'Roboto Slab', serif;
-  font-weight: bold;
-  font-size: 30px;
-  margin-top: 0;
-  margin-bottom: 0;
-}
 
-.nav-button {
+// Regular header styling
+.nav-container {
+  background-color: transparent!important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  border: black solid 2px;
-  border-radius: 25px;
-  width: 80px;
-  height: 30px;
-}
-
-.nav-button:hover {
-  background-color: black;
-  color:white;
-  transition: 0.1s linear;
-}
-
-.active {
-  color: white!important;
-  background-color: black!important;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  z-index: 10;
+  .navigation-container {
+    width: auto;
+  }
+  .nav-logo {
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: #FFF!important;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .navigation {
+    display: flex;
+    justify-content: flex-end!important;
+    a {
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      font-family: 'Roboto Slab', serif;
+    }
+    .nav-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: white solid 2px;
+      border-radius: 25px;
+      width: 80px;
+      height: 30px;
+    }
+    
+    .nav-button:hover {
+      background-color: white;
+      color:black;
+      transition: 0.1s linear;
+    }
+    
+    .active {
+      color: black!important;
+      background-color: white!important;
+    }
+  }
 }

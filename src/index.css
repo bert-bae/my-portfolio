@@ -66,8 +66,7 @@ a {
   padding: 50px 15px;
   width: 90%;
   height: auto;
-  max-width: 1280px;
-  box-shadow: 0 0 12px black;
+  max-width: 1440px;
 }
 
 .container-row {
@@ -144,49 +143,74 @@ a {
     transform: rotateY(360deg);
   }
 }
-.nav-container {
-  background-color: #90AFBC !important;
-  position: relative;
+.nav-container.scrolled {
+  background-color: #FFF !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.nav-container.scrolled .nav-logo {
+  color: black !important;
+}
+.nav-container.scrolled .navigation a {
+  color: black;
+}
+.nav-container.scrolled .navigation .nav-button {
+  border: 2px black solid;
+}
+.nav-container.scrolled .navigation .nav-button:hover {
+  background-color: black;
+  color: white;
 }
 
-.navigation {
+.nav-container {
+  background-color: transparent !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  z-index: 10;
+}
+.nav-container .navigation-container {
+  width: auto;
+}
+.nav-container .nav-logo {
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+  font-size: 30px;
+  color: #FFF !important;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.nav-container .navigation {
   display: flex;
   justify-content: flex-end !important;
 }
-.navigation a {
-  color: black;
+.nav-container .navigation a {
+  color: white;
   font-size: 14px;
   font-weight: bold;
   font-family: "Roboto Slab", serif;
 }
-
-.nav-logo {
-  font-family: "Roboto Slab", serif;
-  font-weight: bold;
-  font-size: 30px;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.nav-button {
+.nav-container .navigation .nav-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: black solid 2px;
+  border: white solid 2px;
   border-radius: 25px;
   width: 80px;
   height: 30px;
 }
-
-.nav-button:hover {
-  background-color: black;
-  color: white;
+.nav-container .navigation .nav-button:hover {
+  background-color: white;
+  color: black;
   transition: 0.1s linear;
 }
-
-.active {
-  color: white !important;
-  background-color: black !important;
+.nav-container .navigation .active {
+  color: black !important;
+  background-color: white !important;
 }
 
 .home-container {
@@ -238,14 +262,13 @@ a {
 }
 
 .home-jumbo {
-  background-image: url("/images/home-jumbo.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50%;
   position: relative;
-  -moz-animation: fadein 3s;
-  -webkit-animation: fadein 3s;
-  animation: fadein 3s;
+  -moz-animation: fadein 1.5s;
+  -webkit-animation: fadein 1.5s;
+  animation: fadein 1.5s;
   height: 100%;
   width: 100%;
   display: flex;
@@ -321,6 +344,11 @@ a {
   align-items: center;
   font-weight: bold;
   cursor: pointer;
+}
+
+.sql-trigger:hover {
+  transform: scale(1.1);
+  transition: all 0.2s;
 }
 
 #sql-popover {

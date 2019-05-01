@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Pie } from 'react-chartjs';
 import { Container, Col } from 'react-bootstrap';
 
+import Jumbotron from './Jumbotron';
+
 export default class About extends Component {
   constructor(props) {
     super(props);
@@ -56,6 +58,7 @@ export default class About extends Component {
     };
     return (
       <div className="App">
+        <Jumbotron imageSrc={"/images/home-jumbo.jpg"} photoBy={"PHOTOGRAPHER"} imageUrl={"#"}/>
         <Container className="section-container" fluid={true}>
           <Col lg={8} sm={12}>
             <h1 className="mainheader">ABOUT ME</h1>

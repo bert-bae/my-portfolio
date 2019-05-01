@@ -19,6 +19,29 @@ export default class Header extends Component {
   }
 
   render() {
+    const getScrollPos = () => {
+      let header = document.getElementById('main-nav');
+      let scrolled = true;
+      let position;
+      function scroll() {
+        if (scrolled) {
+          scrolled = false;
+          position = document.body.scrollTop || document.documentElement.scrollTop;
+          setTimeout(() => {
+            scrolled = true;
+          }, 100);
+        }
+      }
+      scroll();
+      if (position > 100) {
+        header.className = "nav-container scrolled";
+      } else {
+        header.className = "nav-container";
+        
+      }
+    }
+    window.addEventListener('scroll', getScrollPos, true);
+
     const sqlCode = (
       <Popover id="sql-popover" title="SQL Code">
         <div>{this.state.sql}</div>
@@ -31,9 +54,9 @@ export default class Header extends Component {
     }
 
     return (
-      <Navbar className="nav-container" sticky="top" expand="lg" variant="light" bg="light">
+      <Navbar id="main-nav" className="nav-container" sticky="top" expand="lg" variant="light" bg="light">
         <Navbar.Brand className="nav-logo" href="#">CODEBERT</Navbar.Brand>
-        <Container className="navigation" fluid={true}>
+        <Container className="navigation">
           <NavLink className="nav-button" onClick={() => { pageIndicator("home")}} exact activeClassName="active" to="/">Home</NavLink>
           <NavLink className="nav-button" onClick={() => { pageIndicator("projects")}} activeClassName="active" to="/projects">Projects</NavLink>
           <NavLink className="nav-button" onClick={() => { pageIndicator("resume")}} activeClassName="active" to="/resume">Resume</NavLink>

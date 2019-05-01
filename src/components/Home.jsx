@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Container, Col, Popover, OverlayTrigger } from 'react-bootstrap';
 
+import Jumbotron from './Jumbotron';
+
 export default class Home extends Component {
   constructor(props) {
     super(props);
@@ -26,15 +28,7 @@ export default class Home extends Component {
     )
     return (
       <div className="home-container">
-        <Container className="home-images" fluid={true}>
-          <div className="img-overflow">
-            <Container className="home-jumbo" fluid={true}></Container>
-            <div className="photo-credit">
-              <p class="miniheader">Photo by: NAME HERE</p>
-              <a href="#" class="miniheader">Unsplashed Link</a>
-            </div>
-          </div>
-        </Container>
+        <Jumbotron imageSrc={"/images/home-jumbo.jpg"} photoBy={"PHOTOGRAPHER"} imageUrl={"#"}/>       
         <Container className="section-container center" fluid={true}>
           <Col className="center" lg={4} md={4} sm={4}>
             <a className="profile-icons" href="https://github.com/bert-bae">
