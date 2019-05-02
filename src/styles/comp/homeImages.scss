@@ -26,15 +26,6 @@
   }
 }
 
-.img-overflow:hover {
-  .photo-credit {
-    display:block;
-    -moz-animation: fadein 0.5s;
-    -webkit-animation: fadein 0.5s;
-    animation: fadein 0.5s;
-  }
-}
-
 .home-jumbo {
   background-size: cover;
   background-repeat: no-repeat;
@@ -62,24 +53,21 @@
   opacity: 0.5;
 }
 
-.home-jumbo:hover {
-  cursor: pointer;
-  transform: scale(1.2);
-  transition: all .5s;
-}
 
-@media only screen and (max-width: 568px) {
-  .home-images {
-    flex-direction: column;
-    height: 500px;
-    .img-overflow {
-      height: 33%;
-      width: 100%;
-    }
-    .image-column {
-      height: 66%;
-      width: 100%;
-      margin: 5px 0 0 0;
-    }
+
+.img-overflow:hover {
+  .home-jumbo {
+    transform: scale(1.2);
+    transition: all .5s;
+  }
+  .photo-credit {
+    display:block;
+    -moz-animation: fadein 0.5s;
+    -webkit-animation: fadein 0.5s;
+    animation: fadein 0.5s;
+  }
+  .photo-credit:hover {
+    font-weight: bold;
+    transition: all 0.1s;
   }
 }

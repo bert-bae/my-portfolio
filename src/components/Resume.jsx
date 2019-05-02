@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Col } from 'react-bootstrap';
 
+import data from '../utils/data';
 import Jumbotron from './Jumbotron';
 
 export default class Resume extends Component {
@@ -8,9 +9,10 @@ export default class Resume extends Component {
     super(props);
   }
   render() {
+    const photo = data.jumboPhotos.resumeJumbo;
     return (
       <div className="App">
-        <Jumbotron imageSrc={"/images/home-jumbo.jpg"} photoBy={"PHOTOGRAPHER"} imageUrl={"#"}/>
+        <Jumbotron imageSrc={photo.filepath} photoBy={photo.photographer} imgUrl={photo.link}/>
         <Container className="section-container container-column" fluid={true}>
           <h1 className="mainheader">RESUME</h1>
           <Col className="subsection" lg={12} sm={12}>

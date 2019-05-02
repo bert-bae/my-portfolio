@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Col, Popover, OverlayTrigger } from 'react-bootstrap';
 
+import data from '../utils/data';
 import Jumbotron from './Jumbotron';
 
 export default class Home extends Component {
@@ -8,6 +9,7 @@ export default class Home extends Component {
     super(props);
   }
   render() {
+    const photo = data.jumboPhotos.homeJumbo;
     const popover =  (
       <Popover id="contact-popover" title="Contact Information">
         <Container className="contact-container">
@@ -28,7 +30,7 @@ export default class Home extends Component {
     )
     return (
       <div className="home-container">
-        <Jumbotron imageSrc={"/images/home-jumbo.jpg"} photoBy={"PHOTOGRAPHER"} imageUrl={"#"}/>       
+        <Jumbotron imageSrc={photo.filepath} photoBy={photo.photographer} imgUrl={photo.link}/>
         <Container className="section-container center" fluid={true}>
           <Col className="center" lg={4} md={4} sm={4}>
             <a className="profile-icons" href="https://github.com/bert-bae">

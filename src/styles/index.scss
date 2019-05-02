@@ -112,19 +112,6 @@ a {
 .miniheader {
   font-size: $miniheader;
 }
-.chartjs-graph {
-  align-self: center;
-  display: flex;
-  justify-content: center;
-  .dev-skill {
-    margin: 0.5em;
-    text-align: center;
-  }
-}
-
-.skills-container {
-  padding-right: 40px!important;
-}
 
 .center {
   display: flex;
@@ -156,3 +143,4 @@ a {
 @import './comp/contactCard.scss';
 @import './comp/sqlDisplay.scss';
 @import './comp/imageCard.scss';
+@import './comp/aboutMe.scss';
