@@ -28,7 +28,7 @@ body, html, div, span, p, h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto Slab", serif;
 }
 
-#root, .App, .background-container {
+#root, .App, .background-container, body, html {
   height: 100%;
   min-height: 100%;
   width: 100%;
@@ -41,13 +41,6 @@ body, html, div, span, p, h1, h2, h3, h4, h5, h6 {
   width: 90%;
   max-width: 1280px;
   padding: 0 100px;
-}
-
-body, html {
-  min-height: 100%;
-  min-width: 100%;
-  width: 100%;
-  height: 100%;
 }
 
 body, html {
@@ -200,16 +193,12 @@ a {
 }
 
 .home-container {
-  height: calc(100% - 74px);
+  height: 100%;
   width: 100%;
 }
 .home-container i, .home-container .profile-icons {
   color: black;
   cursor: pointer;
-}
-.home-container .outline {
-  border: 1px solid black;
-  padding: 0;
 }
 
 .home-images {
@@ -408,9 +397,15 @@ a {
 }
 
 .current-project-container {
+  display: inline-block;
   width: 100%;
   height: 500px;
   margin: 50px 0 80px 0;
+}
+.current-project-container .mainheader {
+  text-align: center;
+  margin: 0 0 50px 0;
+  width: 100%;
 }
 .current-project-container .highlight-container {
   width: 100%;
@@ -432,6 +427,28 @@ a {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .current-project-container .highlight-container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .current-project-container .highlight-container .highlight-image {
+    order: 1;
+    width: 100%;
+  }
+  .current-project-container .highlight-container .highlight-content {
+    order: 2;
+    width: 100%;
+  }
+
+  .current-project-container ~ .section-container {
+    margin: 0 auto;
+  }
+  .current-project-container ~ .section-container .fa-stack {
+    font-size: 20px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

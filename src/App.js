@@ -14,21 +14,15 @@ class App extends Component {
   constructor(props) {
     super(props);
   }
-  componentDidMount() {
-    AOS.init({
-      duration: 500
-    });
-  }
+
   render() {
     return (
       <Router>
-        <div className="App">
-          <Header/>
-          <Route exact path="/" component={Home}/>
-          <Route path="/projects" component={Projects}/>
-          <Route path="/resume" component={Resume}/>
-          <Route path="/about" component={About}/>
-        </div>
+        <Header/>
+        <Route exact path="/" component={Home}/>
+        <Route path="/projects" component={Projects}/>
+        <Route path="/resume" component={Resume}/>
+        <Route path="/about" component={About}/>
       </Router>
     );
   }

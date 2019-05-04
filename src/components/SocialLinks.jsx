@@ -21,7 +21,7 @@ export default function SocialLinks() {
     </Popover>
   )
   return (
-    <Container className="section-container" fluid={true}>
+    <Container className="section-container">
       <Col className="center" lg={4} md={4} sm={4}>
         <a className="profile-icons" href="https://github.com/bert-bae">
           <span className="fa-stack fa-2x fa-2x">

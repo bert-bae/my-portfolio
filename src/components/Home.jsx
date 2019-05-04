@@ -15,7 +15,7 @@ export default class Home extends Component {
       <div className="home-container">
         <Jumbotron imageSrc={photo.filepath} photoBy={photo.photographer} imgUrl={photo.link}/>
         <CurrentProject imgSrc={"/images/home-img1.jpg"}/>
-        {/* <SocialLinks/> */}
+        <SocialLinks/>
       </div>
     )
   } 
