@@ -8,43 +8,50 @@ import ImageCard from './ImageCard';
 export default class App extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      viewProject: data.projects[0],
+    }
   }
   render() {
-    const photo = data.jumboPhotos.projectJumbo;
-  
     const scrollRef = React.createRef();
-    function scrollCards(scrollPx, ref) {
+    const viewProject = (index) => {
+      this.setState({
+        viewProject: data.projects[index],
+      });
+    }
+
+    // Scrolls the project card section
+    const scrollCards = (scrollPx, ref) => {
       ref.scrollLeft += scrollPx;
     }
 
+    const photo = data.jumboPhotos.projectJumbo;
+
+    // Pull data from project list and convert to cards
+    const projectCards = data.projects.map((project, index) => {
+      return (
+        <ImageCard 
+          title={project.title} 
+          description={project.description} 
+          imgSrc={project.imgSrc} 
+          viewProject={viewProject}
+          index={index}
+          key={index}/>
+      )
+    })
     return (
       <div className="projects-container">
         <Jumbotron imageSrc={photo.filepath} photoBy={photo.photographer} imgUrl={photo.link}/>
         <div className="project-cards">
           <div className="scroll-container" ref={scrollRef}>
-            <ImageCard 
-              title={"hello"} 
-              description={"description"} 
-              imgSrc={"/images/home-img1.jpg"} 
-              projectUrl={"https://www.github.com"}/>
-            <ImageCard 
-              title={"hello"} 
-              description={"description"} 
-              imgSrc={"/images/home-img1.jpg"} 
-              projectUrl={"https://www.github.com"}/>
-            <ImageCard 
-              title={"hello"} 
-              description={"description"} 
-              imgSrc={"/images/home-img1.jpg"} 
-              projectUrl={"https://www.github.com"}/>
-            <ImageCard 
-              title={"hello"} 
-              description={"description"} 
-              imgSrc={"/images/home-img1.jpg"} 
-              projectUrl={"https://www.github.com"}/>
+            { projectCards }
           </div>
-          <i class="arrow right-control" onClick={() => { scrollCards(258, scrollRef.current) }}></i>
-          <i class="arrow left-control" onClick={() => { scrollCards(-258, scrollRef.current) }}></i>
+          <div className="control right-container" onClick={() => { scrollCards(258, scrollRef.current) }}>
+            <i class="arrow right-control"></i>
+          </div>
+          <div className="control left-container"  onClick={() => { scrollCards(-258, scrollRef.current) }}>
+            <i class="arrow left-control"></i>
+          </div>
         </div>
         <Container className="section-container container-column" fluid={true}>
           <h1 className="mainheader">PROJECTS</h1>

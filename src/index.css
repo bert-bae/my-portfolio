@@ -133,6 +133,10 @@ a {
   background-color: black;
   color: white;
 }
+.nav-container.scrolled .navigation .active {
+  color: white !important;
+  background-color: black !important;
+}
 
 .nav-container {
   background-color: transparent !important;
@@ -326,6 +330,7 @@ a {
   width: 230px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   border-radius: 10px;
+  margin: 14px;
   overflow: hidden;
 }
 .card-container .card-overflow {
@@ -434,35 +439,55 @@ a {
   overflow-x: visible;
   position: relative;
 }
-.projects-container .project-cards i.arrow {
+.projects-container .project-cards .scroll-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  padding: 0 40px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: scroll;
+  position: relative;
+}
+.projects-container .project-cards .control {
+  height: 100%;
+  width: 40px;
+  cursor: pointer;
+}
+.projects-container .project-cards .control.right-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.projects-container .project-cards .control.right-container:hover .right-control {
+  border-color: black;
+}
+.projects-container .project-cards .control.left-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.projects-container .project-cards .control.left-container:hover .left-control {
+  border-color: black;
+}
+.projects-container .project-cards .control i.arrow {
   border: solid rgba(0, 0, 0, 0.8);
   border-width: 0 5px 5px 0;
   display: inline-block;
   padding: 8px;
-  cursor: pointer;
 }
-.projects-container .project-cards i.arrow.right-control {
+.projects-container .project-cards .control i.arrow.right-control {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   position: absolute;
   top: calc(50% - 8px);
   right: 20px;
 }
-.projects-container .project-cards i.arrow.left-control {
+.projects-container .project-cards .control i.arrow.left-control {
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
   position: absolute;
   top: calc(50% - 8px);
   left: 20px;
-}
-.projects-container .project-cards i.arrow:hover {
-  border-color: black;
-}
-.projects-container .project-cards .scroll-container {
-  display: flex;
-  flex-direction: row;
-  overflow-x: scroll;
-  padding: 0 40px;
 }
 
 /*# sourceMappingURL=index.css.map */

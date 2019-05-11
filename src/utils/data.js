@@ -21,5 +21,51 @@ export default {
       filepath: "/images/resume-jumbo.jpg",
       link:"https://unsplash.com/@cbyoung"
     }
-  }
+  },
+
+  // Project mock data
+  projects: [
+    {
+      title: "hello",
+      description: "description",
+      techStack: "nodejs, react, javascript",
+      imgSrc: "/images/home-img1.jpg",
+      projectUrl: "https://www.github.com",
+    },
+    {
+      title: "world",
+      description: "description two",
+      techStack: "nodejs, react, javascript",
+      imgSrc: "/images/home-img2.jpg",
+      projectUrl: "https://www.github.com",
+    },
+    {
+      title: "hello",
+      description: "description",
+      techStack: "nodejs, react, javascript",
+      imgSrc: "/images/home-img1.jpg",
+      projectUrl: "https://www.github.com",
+    },
+    {
+      title: "world",
+      description: "description two",
+      techStack: "nodejs, react, javascript",
+      imgSrc: "/images/home-img2.jpg",
+      projectUrl: "https://www.github.com",
+    },
+    {
+      title: "hello",
+      description: "description",
+      techStack: "nodejs, react, javascript",
+      imgSrc: "/images/home-img1.jpg",
+      projectUrl: "https://www.github.com",
+    },
+    {
+      title: "world",
+      description: "description two",
+      techStack: "nodejs, react, javascript",
+      imgSrc: "/images/home-img2.jpg",
+      projectUrl: "https://www.github.com",
+    },
+  ]
 }
