@@ -60,7 +60,6 @@ export default class Header extends Component {
           <NavLink className="nav-button" onClick={() => { pageIndicator("home")}} exact activeClassName="active" to="/">Home</NavLink>
           <NavLink className="nav-button" onClick={() => { pageIndicator("projects")}} activeClassName="active" to="/projects">Projects</NavLink>
           <NavLink className="nav-button" onClick={() => { pageIndicator("resume")}} activeClassName="active" to="/resume">Resume</NavLink>
-          <NavLink className="nav-button" onClick={() => { pageIndicator("about")}} activeClassName="active" to="/about">About</NavLink>
         </Container>
         <OverlayTrigger 
           trigger={['click']} // Hover for desktop, click for mobile

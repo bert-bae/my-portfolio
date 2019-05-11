@@ -11,9 +11,41 @@ export default class App extends Component {
   }
   render() {
     const photo = data.jumboPhotos.projectJumbo;
+  
+    const scrollRef = React.createRef();
+    function scrollCards(scrollPx, ref) {
+      ref.scrollLeft += scrollPx;
+    }
+
     return (
-      <div class="projects-container">
+      <div className="projects-container">
         <Jumbotron imageSrc={photo.filepath} photoBy={photo.photographer} imgUrl={photo.link}/>
+        <div className="project-cards">
+          <div className="scroll-container" ref={scrollRef}>
+            <ImageCard 
+              title={"hello"} 
+              description={"description"} 
+              imgSrc={"/images/home-img1.jpg"} 
+              projectUrl={"https://www.github.com"}/>
+            <ImageCard 
+              title={"hello"} 
+              description={"description"} 
+              imgSrc={"/images/home-img1.jpg"} 
+              projectUrl={"https://www.github.com"}/>
+            <ImageCard 
+              title={"hello"} 
+              description={"description"} 
+              imgSrc={"/images/home-img1.jpg"} 
+              projectUrl={"https://www.github.com"}/>
+            <ImageCard 
+              title={"hello"} 
+              description={"description"} 
+              imgSrc={"/images/home-img1.jpg"} 
+              projectUrl={"https://www.github.com"}/>
+          </div>
+          <i class="arrow right-control" onClick={() => { scrollCards(258, scrollRef.current) }}></i>
+          <i class="arrow left-control" onClick={() => { scrollCards(-258, scrollRef.current) }}></i>
+        </div>
         <Container className="section-container container-column" fluid={true}>
           <h1 className="mainheader">PROJECTS</h1>
           <Container className="project-container container-row">
@@ -28,10 +60,6 @@ export default class App extends Component {
               <p className="miniheader">Github URL</p>
             </Col>
           </Container>
-          {/* <ImageCard title={"hello"} 
-            description={"description"} 
-            imgSrc={"/images/home-img1.jpg"} 
-            projectUrl={"https://www.github.com"}/> */}
         </Container>
       </div>
     )

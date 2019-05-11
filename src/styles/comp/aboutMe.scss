@@ -1,22 +1,59 @@
 .about-me-container {
+  display: inline-block;
   width: 100%;
   height: 100%;
-  .section-container {
-    flex-wrap: wrap;
+  margin: 50px 0 80px 0;
+  .mainheader {
+    text-align: center;
+    margin: 0 0 50px 0;
+    width: 100%;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.5)
+  }
+  .highlight-container {
+    width: 100%;
+    height: 500px;
+    display: flex;
     flex-direction: row;
-    .chartjs-graph {
+    .highlight-image {
+      width: 50%;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50%;
+    }
+    .highlight-content {
+      height: 100%;
+      width: 50%;
+      padding: 0 50px 0 50px;
       display: flex;
-      flex-flow: row wrap;
-      align-items: center;
-      justify-content: flex-start;
-      .dev-skill {
-        margin: 5px;
-        flex: 0 1 calc(15% - 10px);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+      flex-flow: column wrap;
+      justify-content: center;
+      .subheader {
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .about-me-container {
+    .highlight-container {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      .highlight-image {
+        order: 1;
+        width: 100%;
+      }
+      .highlight-content {
+        order: 2;
+        width: 100%;
+      }
+    }
+  }
+  .about-me-container ~ .section-container {
+    margin: 0 auto;
+    .fa-stack {
+      font-size: 20px;
     }
   }
 }
