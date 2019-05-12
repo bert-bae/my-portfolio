@@ -29,7 +29,7 @@ export default {
   projects: [
     {
       title: "Colinkz Media",
-      description: "Colinkz is founded by Noi Soudarack intended to be a platform for communities to connect with other cultural groups by providing access to events, restaurants, and directories to local organizations. As a software developer for Colinkz, I work closely with the founder, CTO, and designers to create a platform that reflects the values of the organization.\n\nIf interested, learn more about what we do and support our goal of increasing multicultural diversity across the world!\n\n Link:  https://www.colinkz.com",
+      description: "Colinkz is founded by Noi Soudarack. It is intended to be a platform for communities to connect with other cultural groups by providing access to events, restaurants, and directories to local organizations for many cultural groups. As a software developer for Colinkz, I work closely with the founder, CTO, and designers to develop and maintain existing and new features for the company website.\n\nIf interested, learn more about what we do and support our goal of increasing multicultural diversity across the world!\n\n Link:  https://www.colinkz.com",
       techStack: ["Unfortunately this information cannot be released as it is the intellectual property of the organization!"],
       imgSrc: ["/images/projects/colinkz1.jpg", "/images/projects/colinkz2.jpg", "/images/projects/colinkz3.jpg", "/images/projects/colinkz-logo.png"],
       projectUrl: "https://www.colinkz.com",
