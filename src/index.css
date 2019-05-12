@@ -33,6 +33,7 @@ body, html {
 body {
   overflow-y: scroll;
   overflow-x: hidden;
+  position: relative;
 }
 
 body, html, div, span, p, h1, h2, h3, h4, h5, h6 {
@@ -101,6 +102,14 @@ a {
   align-items: center;
 }
 
+.css-show {
+  display: block !important;
+}
+
+.css-hide {
+  display: none !important;
+}
+
 .circle-rotate {
   -webkit-animation: rotateY 1s 0s linear;
   animation: rotateY 1s 0s linear;
@@ -153,7 +162,17 @@ a {
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
+  justify-content: space-between;
   z-index: 10;
+}
+.nav-container #collapse-toggle {
+  display: none;
+  margin-right: 14px;
+  color: #FFF;
+  cursor: pointer;
+}
+.nav-container #collapse-toggle.toggled {
+  color: black !important;
 }
 .nav-container .navigation-container {
   width: auto;
@@ -195,6 +214,42 @@ a {
   background-color: white !important;
 }
 
+@media only screen and (max-width: 768px) {
+  .nav-container.scrolled #collapse-toggle {
+    color: black;
+  }
+
+  .nav-container .navigation {
+    display: none;
+    position: absolute;
+    height: 204px;
+    right: 0;
+    padding: 55px 0 0 0;
+    top: 0;
+    z-index: -1;
+    background-color: #FFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    border-bottom-left-radius: 15px;
+  }
+  .nav-container .navigation a {
+    color: black;
+  }
+  .nav-container .navigation .nav-button {
+    border: 2px black solid;
+  }
+  .nav-container .navigation .nav-button:hover {
+    background-color: black;
+    color: white;
+  }
+  .nav-container .navigation .active {
+    color: white !important;
+    background-color: black !important;
+  }
+  .nav-container #collapse-toggle {
+    display: block !important;
+    color: #FFF;
+  }
+}
 .home-container {
   height: 100%;
   width: 100%;
@@ -382,7 +437,6 @@ a {
   display: inline-block;
   width: 100%;
   height: 100%;
-  margin: 0 0 80px 0;
 }
 .about-me-container .highlight-container {
   width: 100%;
@@ -537,8 +591,7 @@ a {
   background-repeat: no-repeat;
   background-position: 50%;
   margin: 5px;
-  flex-shrink: 0;
-  flex: 1 1 calc(25% - 10px);
+  flex: 1 0 auto;
   cursor: pointer;
 }
 

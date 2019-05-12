@@ -12,13 +12,20 @@ export default class Header extends Component {
   }
 
   componentDidMount = () => {
-    let page = document.querySelector('.nav-button.active').text.toLowerCase();
-    this.setState({
-      sql: data.sqlQuery[page]
-    })
-  }
+    // Navbar menu-btns toggle for mobile
+    const toggleMobileMenu = () => {
+      let element = document.getElementById('menu-btns');
+      let trigger = document.getElementById('collapse-toggle');
+      if (element.classList.contains("css-show")) {
+        element.classList.remove("css-show");
+        trigger.classList.remove("toggled");
+      } else {
+        element.classList.add("css-show");
+        trigger.classList.add("toggled");
+      }
+    }
 
-  render() {
+    // Navbar scroll change in css
     const getScrollPos = () => {
       let header = document.getElementById('main-nav');
       let scrolled = true;
@@ -34,14 +41,22 @@ export default class Header extends Component {
       }
       scroll();
       if (position > 100) {
-        header.className = "nav-container scrolled";
+        header.classList.add("scrolled");
       } else {
-        header.className = "nav-container";
+        header.classList.remove("scrolled");
         
       }
     }
-    window.addEventListener('scroll', getScrollPos, true);
+    let page = document.querySelector('.nav-button.active').text.toLowerCase();
 
+    window.addEventListener('scroll', getScrollPos, true);
+    document.getElementById('collapse-toggle').addEventListener('click', toggleMobileMenu, true);
+    this.setState({
+      sql: data.sqlQuery[page]
+    })
+  }
+
+  render() {
     const sqlCode = (
       <Popover id="sql-popover" title="SQL Code">
         <div>{this.state.sql}</div>
@@ -56,11 +71,12 @@ export default class Header extends Component {
     return (
       <Navbar id="main-nav" className="nav-container" sticky="top" expand="lg" variant="light" bg="light">
         <Navbar.Brand className="nav-logo" href="#">CODEBERT</Navbar.Brand>
-        <Container className="navigation">
+        <div id="menu-btns" className="navigation">
           <NavLink className="nav-button" onClick={() => { pageIndicator("home")}} exact activeClassName="active" to="/">Home</NavLink>
           <NavLink className="nav-button" onClick={() => { pageIndicator("projects")}} activeClassName="active" to="/projects">Projects</NavLink>
           <NavLink className="nav-button" onClick={() => { pageIndicator("resume")}} activeClassName="active" to="/resume">Resume</NavLink>
-        </Container>
+        </div>
+        <i id="collapse-toggle" className="fas fa-bars fa-lg"></i>
         <OverlayTrigger 
           trigger={['click']} // Hover for desktop, click for mobile
           placement="right" 

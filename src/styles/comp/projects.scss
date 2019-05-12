@@ -105,8 +105,7 @@
           background-repeat: no-repeat;
           background-position: 50%;
           margin: 5px;
-          flex-shrink: 0;
-          flex: 1 1 calc(25% - 10px);
+          flex: 1 0 auto;
           cursor: pointer;
         }
       }
