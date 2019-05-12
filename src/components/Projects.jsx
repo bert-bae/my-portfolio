@@ -46,10 +46,14 @@ export default class App extends Component {
 
     // Pull data from project list and convert to cards
     const projectCards = data.projects.map((project, index) => {
+      let shortDescription;
+      if (project.description.length > 100) {
+        shortDescription = project.description.slice(0, 100) + "...";
+      }
       return (
         <ImageCard 
           title={project.title} 
-          description={project.description} 
+          description={shortDescription} 
           imgSrc={project.imgSrc[0]} 
           viewProject={viewProject}
           index={index}

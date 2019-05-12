@@ -70,12 +70,13 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      height: 300px;
+      height: fit-content;
       width: 100%;
       .content-description {
         width: calc(66% - 15px);
         margin: 0 0 15px 0;
         padding: 0 32px 32px 32px;
+        white-space: pre-wrap;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
       }
       .content-tech {
@@ -97,7 +98,7 @@
         display: flex;
         flex-flow: row wrap;
         height: 100%;
-        width: 100%;
+        width: fit-content;
         .project-image {
           height: 165px;
           width: 165px;
