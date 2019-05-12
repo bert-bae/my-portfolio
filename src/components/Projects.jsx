@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Container, Col } from 'react-bootstrap';
 
 import data from '../utils/data';
 import Jumbotron from './Jumbotron';
@@ -9,14 +8,34 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      viewProject: data.projects[0],
+      title: null,
+      description: null,
+      techStack: null,
+      projectImages: null,
     }
   }
+  
   render() {
     const scrollRef = React.createRef();
+    const photo = data.jumboPhotos.projectJumbo;
+
+    // Clicking on a card... trigger state change
     const viewProject = (index) => {
+      let techSkills = data.projects[index].techStack.map((skill, index) => {
+        return (
+          <li key={index}>{skill}</li>
+        )
+      })
+      let projectImages = data.projects[index].imgSrc.map((src, index) => {
+        return (
+          <div className="project-image" style={{backgroundImage: `url(${src})`}} key={index}></div>
+        )
+      });
       this.setState({
-        viewProject: data.projects[index],
+        title: data.projects[index].title,
+        description: data.projects[index].description,
+        techStack: techSkills,
+        projectImages: projectImages,
       });
     }
 
@@ -25,15 +44,13 @@ export default class App extends Component {
       ref.scrollLeft += scrollPx;
     }
 
-    const photo = data.jumboPhotos.projectJumbo;
-
     // Pull data from project list and convert to cards
     const projectCards = data.projects.map((project, index) => {
       return (
         <ImageCard 
           title={project.title} 
           description={project.description} 
-          imgSrc={project.imgSrc} 
+          imgSrc={project.imgSrc[0]} 
           viewProject={viewProject}
           index={index}
           key={index}/>
@@ -47,27 +64,39 @@ export default class App extends Component {
             { projectCards }
           </div>
           <div className="control right-container" onClick={() => { scrollCards(258, scrollRef.current) }}>
-            <i class="arrow right-control"></i>
+            <i className="arrow right-control"></i>
           </div>
           <div className="control left-container"  onClick={() => { scrollCards(-258, scrollRef.current) }}>
-            <i class="arrow left-control"></i>
+            <i className="arrow left-control"></i>
           </div>
         </div>
-        <Container className="section-container container-column" fluid={true}>
-          <h1 className="mainheader">PROJECTS</h1>
-          <Container className="project-container container-row">
-            <Col lg={4} sm={12}>
-              <p className="subheader">Project Name</p>
-            </Col>
-            <Col lg={4} sm={12}>
-              <p className="subheader">Tech Stack</p>
-            </Col>
-            <Col lg={4} sm={12}>
-              <p className="subheader">Images</p>
-              <p className="miniheader">Github URL</p>
-            </Col>
-          </Container>
-        </Container>
+        {!this.state.title && 
+          <div className="project-details section-container container-column">
+            <h3 style={{textAlign: "center"}}>Click a card to view project details.</h3>
+          </div>        
+        }
+        {this.state.title &&
+          <div className="project-details section-container container-column">
+            <div className="inner-container">
+              <div className="content-description">
+                <h1 className="mainheader">{this.state.title}</h1>
+                <p className="content-text">{this.state.description}</p>
+              </div>
+              <div className="content-tech">
+                <h1 className="mainheader">Tech Stack</h1>
+                <ul className="content-text">
+                  {this.state.techStack}
+                </ul>
+              </div>
+            </div>
+            <div className="content-images">
+              <h1 className="mainheader">Images</h1>
+              <div className="images-container">
+                { this.state.projectImages }
+              </div>
+            </div>
+          </div>
+        }
       </div>
     )
   }

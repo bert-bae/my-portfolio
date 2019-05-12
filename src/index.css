@@ -41,6 +41,11 @@ body, html, div, span, p, h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto Slab", serif;
 }
 
+.bs-column {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 a {
   margin: 14px;
   text-decoration: none !important;
@@ -331,6 +336,7 @@ a {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   margin: 14px;
+  cursor: pointer;
   overflow: hidden;
 }
 .card-container .card-overflow {
@@ -376,13 +382,7 @@ a {
   display: inline-block;
   width: 100%;
   height: 100%;
-  margin: 50px 0 80px 0;
-}
-.about-me-container .mainheader {
-  text-align: center;
-  margin: 0 0 50px 0;
-  width: 100%;
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+  margin: 0 0 80px 0;
 }
 .about-me-container .highlight-container {
   width: 100%;
@@ -400,9 +400,9 @@ a {
 .about-me-container .highlight-container .highlight-content {
   height: 100%;
   width: 50%;
-  padding: 0 50px 0 50px;
+  padding: 50px;
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
   justify-content: center;
 }
 .about-me-container .highlight-container .highlight-content .subheader {
@@ -412,15 +412,19 @@ a {
 @media only screen and (max-width: 768px) {
   .about-me-container .highlight-container {
     flex-direction: column;
-    flex-wrap: nowrap;
+    height: auto;
   }
   .about-me-container .highlight-container .highlight-image {
-    order: 1;
+    order: 2;
+    height: 400px;
     width: 100%;
   }
   .about-me-container .highlight-container .highlight-content {
-    order: 2;
+    order: 1;
     width: 100%;
+    margin: 50px 0;
+    padding: 10px;
+    text-align: center;
   }
 
   .about-me-container ~ .section-container {
@@ -488,6 +492,83 @@ a {
   position: absolute;
   top: calc(50% - 8px);
   left: 20px;
+}
+.projects-container .project-details .mainheader {
+  text-transform: capitalize;
+}
+.projects-container .project-details .inner-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 300px;
+  width: 100%;
+}
+.projects-container .project-details .inner-container .content-description {
+  width: calc(66% - 15px);
+  margin: 0 0 15px 0;
+  padding: 0 32px 32px 32px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.projects-container .project-details .inner-container .content-tech {
+  width: 33%;
+  margin-bottom: 15px;
+  padding: 0 32px 32px 32px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.projects-container .project-details .inner-container .content-tech li {
+  text-transform: capitalize;
+}
+.projects-container .project-details .content-images {
+  height: fit-content;
+  width: 100%;
+  padding: 0 32px 32px 32px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.projects-container .project-details .content-images .images-container {
+  display: flex;
+  flex-flow: row wrap;
+  height: 100%;
+  width: 100%;
+}
+.projects-container .project-details .content-images .images-container .project-image {
+  height: 165px;
+  width: 165px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  margin: 5px;
+  flex-shrink: 0;
+  flex: 1 1 calc(25% - 10px);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .projects-container .project-cards .scroll-container {
+    padding: 0;
+  }
+  .projects-container .project-details {
+    flex-wrap: wrap;
+  }
+  .projects-container .project-details .inner-container {
+    flex-flow: column nowrap;
+    height: fit-content;
+    margin-bottom: 15px;
+  }
+  .projects-container .project-details .inner-container .mainheader {
+    margin: 15px 0;
+  }
+  .projects-container .project-details .inner-container .content-tech {
+    width: 100%;
+    margin: 0;
+    padding: 0 15px 15px 15px;
+  }
+  .projects-container .project-details .inner-container .content-description {
+    width: 100%;
+    padding: 0 15px 15px 15px;
+  }
+  .projects-container .project-details .content-images {
+    padding: 0 15px 15px 15px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

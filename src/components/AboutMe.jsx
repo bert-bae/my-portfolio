@@ -4,11 +4,10 @@ import {} from 'react-bootstrap';
 export default function AboutMe({ imgSrc }) {
   return (
     <div className="about-me-container">
-      <h1 className="mainheader">Hello Hello!</h1>
       <div className="highlight-container">
         <div className="highlight-image" style={{backgroundImage: `url(${imgSrc})`}}></div>
         <div className="highlight-content">
-          <p className="subheader">About ME</p>
+          <p className="subheader">About Me</p>
           <p className="content">I am a NodeJS developer with with full-stack knowledge. I have a particular interest in user experience, responsive design, but find it fascinating how data can be analyzed to meet the user and client needs. Having worked in customer service, sales, training, and management in the past, my experience drives me towards creating efficient workflows that improve the experience of organizations and customers.</p>
         </div>
       </div>
@@ -25,7 +24,7 @@ export default function AboutMe({ imgSrc }) {
         <div className="highlight-image" style={{backgroundImage: `url(${imgSrc})`}}></div>
         <div className="highlight-content">
           <p className="subheader">Present Role</p>
-          <p className="content">Community, Connection.</p>
+          <p className="content">Community, Connection, Culture <br/><br/> As the main software developer for Colinkz Media, I am responsible for the full-stack maintenance and development of our organization's website. Our team works together to create a cultural platform that will be the future gateway used to improving our understanding of diverse cultures and our community. To learn more about the organization:<a href="https://www.colinkz.com/story" alt="Link to Colinkz Media">visit our site!</a>.</p>
         </div>
       </div>
     </div>

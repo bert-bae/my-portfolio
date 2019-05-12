@@ -14,7 +14,7 @@ export default class Header extends Component {
   componentDidMount = () => {
     let page = document.querySelector('.nav-button.active').text.toLowerCase();
     this.setState({
-      sql: data[page]
+      sql: data.sqlQuery[page]
     })
   }
 
@@ -49,7 +49,7 @@ export default class Header extends Component {
     )
     const pageIndicator = (page) => {
       this.setState({
-        sql: data[page] || "Not Available",
+        sql: data.sqlQuery[page] || "Not Available",
       })
     }
 
