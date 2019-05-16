@@ -6,9 +6,6 @@ import data from '../utils/data';
 export default class Header extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      sql: null,
-    }
   }
 
   componentDidMount = () => {
@@ -51,40 +48,18 @@ export default class Header extends Component {
 
     window.addEventListener('scroll', getScrollPos, true);
     document.getElementById('collapse-toggle').addEventListener('click', toggleMobileMenu, true);
-    this.setState({
-      sql: data.sqlQuery[page]
-    })
   }
 
   render() {
-    const sqlCode = (
-      <Popover id="sql-popover" title="SQL Code">
-        <div>{this.state.sql}</div>
-      </Popover>
-    )
-    const pageIndicator = (page) => {
-      this.setState({
-        sql: data.sqlQuery[page] || "Not Available",
-      })
-    }
-
     return (
       <Navbar id="main-nav" className="nav-container" sticky="top" expand="lg" variant="light" bg="light">
         <Navbar.Brand className="nav-logo" href="#">CODEBERT</Navbar.Brand>
         <div id="menu-btns" className="navigation">
-          <NavLink className="nav-button" onClick={() => { pageIndicator("home")}} exact activeClassName="active" to="/">Home</NavLink>
-          <NavLink className="nav-button" onClick={() => { pageIndicator("projects")}} activeClassName="active" to="/projects">Projects</NavLink>
-          <NavLink className="nav-button" onClick={() => { pageIndicator("resume")}} activeClassName="active" to="/resume">Resume</NavLink>
+          <NavLink className="nav-button" exact activeClassName="active" to="/">Home</NavLink>
+          <NavLink className="nav-button" activeClassName="active" to="/projects">Projects</NavLink>
+          <NavLink className="nav-button" activeClassName="active" to="/resume">Resume</NavLink>
         </div>
         <i id="collapse-toggle" className="fas fa-bars fa-lg"></i>
-        <OverlayTrigger 
-          trigger={['click']} // Hover for desktop, click for mobile
-          placement="right" 
-          overlay={sqlCode}>
-          <div className="sql-trigger">
-           <p className="miniheader sql">SQL Query</p>
-          </div>
-        </OverlayTrigger>
       </Navbar>
     );
   }

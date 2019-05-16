@@ -1,11 +1,4 @@
 export default {
-  sqlQuery: {
-    home: `SELECT linkedin, github, phone, personal_email, work_email FROM user\n  WHERE owner = 1 LIMIT 1;`,
-    projects: 'SELECT title, project_link, program_language, description, tech_stack FROM projects\n  WHERE owner = 1;',
-    resume: 'SELECT summary, work_experience, other_skills, interests FROM user\n  WHERE owner = 1;',
-    about: 'SELECT about_me, tech_skills FROM user\n  WHERE owner = 1;',
-  },
-
   // Site jumbotron photos
   jumboPhotos: {
     homeJumbo: {
@@ -28,13 +21,6 @@ export default {
   // Project mock data
   projects: [
     {
-      title: "Colinkz Media",
-      description: "Colinkz is founded by Noi Soudarack. It is intended to be a platform for communities to connect with other cultural groups by providing access to events, restaurants, and directories to local organizations for many cultural groups. As a software developer for Colinkz, I work closely with the founder, CTO, and designers to develop and maintain existing and new features for the company website.\n\nIf interested, learn more about what we do and support our goal of increasing multicultural diversity across the world!\n\n Link:  https://www.colinkz.com",
-      techStack: ["Unfortunately this information cannot be released as it is the intellectual property of the organization!"],
-      imgSrc: ["/images/projects/colinkz1.jpg", "/images/projects/colinkz2.jpg", "/images/projects/colinkz3.jpg", "/images/projects/colinkz-logo.png"],
-      projectUrl: "https://www.colinkz.com",
-    },
-    {
       title: "NuBrew",
       description: "NuBrew is an application that allows users to vote on their craft beer drinks and keep track of favorited drinks over time. As users expand their set of craft beers tried over time, the application will provide recommendations based on their previous likes based on IBU and category/style of drink. Of course, users need to be able to take that plunge and explore uncharted territories by trying something new by random as well, even if they really don't like that one style, taste changes over time!\n\nWe want to make it as easy as possible, so for those that bought their drinks with labels, the application was created while experimenting machine learning and label recognition using Google AutoML Vision.\n\nIn collaboration with Adam Romeo (https://adamromeo.dev/)",
       techStack: ["React-Native", "PostgreSql", "Knex", "NodeJS", "Express",  "SaSS", "Google AutoML"],
@@ -54,6 +40,13 @@ export default {
       techStack: ["Javascript", "jQuery", "PostgreSql", "Knex", "EJS", "Express", "Ajax", "SaSS"],
       imgSrc: ["/images/projects/rs1.png", "/images/projects/rs2.png", "/images/projects/rs3.png", "/images/projects/rs4.png", "/images/projects/rs5.png"],
       projectUrl: "https://github.com/bert-bae/outdoodle",
-    }
+    },
+    {
+      title: "Colinkz Media",
+      description: "Colinkz is founded by Noi Soudarack. It is intended to be a platform for communities to connect with other cultural groups by providing access to events, restaurants, and directories to local organizations for many cultural groups. As a software developer for Colinkz, I work closely with the founder, CTO, and designers to develop and maintain existing and new features for the company website.\n\nIf interested, learn more about what we do and support our goal of increasing multicultural diversity across the world!\n\n Link:  https://www.colinkz.com",
+      techStack: ["Unfortunately this information cannot be released as it is the intellectual property of the organization!"],
+      imgSrc: ["/images/projects/colinkz1.jpg", "/images/projects/colinkz2.jpg", "/images/projects/colinkz3.jpg", "/images/projects/colinkz-logo.png"],
+      projectUrl: "https://www.colinkz.com",
+    },
   ]
 }
