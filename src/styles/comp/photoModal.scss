@@ -1,0 +1,34 @@
+#photo-modal {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  .modal-content {
+    position: absolute;
+    height: 75%;
+    width: 75%;
+    top: calc(50% - 37.5%);
+    left: calc(50% - 37.5%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: none;
+    .modal-close {
+      position: absolute;
+      top: 0;
+      right: -20px;
+      color: #FFF;
+      cursor: pointer;
+    }
+    .modal-photo {
+      height: 100%;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 50%;
+    }
+  }
+}

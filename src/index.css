@@ -27,7 +27,7 @@ body, html {
   width: 100%;
   min-height: 100%;
   min-width: 100%;
-  display: block;
+  display: inline-block;
 }
 
 body {
@@ -88,7 +88,7 @@ a {
 }
 
 .sectionheader {
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 0.5em;
 }
 
@@ -250,6 +250,41 @@ a {
     color: #FFF;
   }
 }
+#photo-modal {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#photo-modal .modal-content {
+  position: absolute;
+  height: 75%;
+  width: 75%;
+  top: calc(50% - 37.5%);
+  left: calc(50% - 37.5%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+}
+#photo-modal .modal-content .modal-close {
+  position: absolute;
+  top: 0;
+  right: -20px;
+  color: #FFF;
+  cursor: pointer;
+}
+#photo-modal .modal-content .modal-photo {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
+}
+
 .home-container {
   height: 100%;
   width: 100%;
@@ -390,7 +425,7 @@ a {
   padding: 9px;
 }
 .card-container .card-content .card-title {
-  font-size: 16px;
+  font-size: 20px;
   font-family: "Roboto Slab", serif;
   font-weight: bolder;
 }
@@ -588,6 +623,55 @@ a {
   .projects-container .project-details .content-images {
     padding: 0 15px 15px 15px;
   }
+}
+.resume-container {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+}
+.resume-container .skills-container {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  height: auto;
+  margin-top: 35px;
+}
+.resume-container .skills-container .dev-skill {
+  flex: 1 0 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.resume-container .skills-container .dev-skill canvas {
+  margin: 10px;
+}
+.resume-container .resume-content {
+  margin: 0 10px;
+}
+.resume-container .resume-content .resume-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.resume-container .resume-content .resume-header .job-title {
+  font-size: 22px;
+}
+.resume-container .resume-content .resume-header .job-duration {
+  font-size: 14px;
+  opacity: 0.8;
+}
+.resume-container .resume-content .job-organization {
+  font-size: 20px;
+}
+.resume-container .resume-content .job-organization .city {
+  font-size: 14px;
+  padding-left: 20px;
+  opacity: 0.8;
+}
+.resume-container .resume-content .responsibilities-container {
+  margin: 20px 0 !important;
 }
 
 /*# sourceMappingURL=index.css.map */

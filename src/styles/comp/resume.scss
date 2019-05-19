@@ -1,0 +1,51 @@
+.resume-container {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  .skills-container {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: auto;
+    margin-top: 35px;
+    .dev-skill {
+      flex: 1 0 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      canvas {
+        margin: 10px;
+      }
+    }
+  }
+
+  // Experiences section
+  .resume-content {
+    margin: 0 10px;
+    .resume-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      .job-title {
+        font-size: $contentheader;
+      }
+      .job-duration {
+        font-size: $main-font-size;
+        opacity: 0.8;
+      }
+    }
+    .job-organization {
+      font-size: $sectionheader;
+      .city {
+        font-size: $main-font-size;
+        padding-left: 20px;
+        opacity: 0.8;
+      }
+    }
+    .responsibilities-container {
+      margin: 20px 0!important;
+    }
+  }
+}

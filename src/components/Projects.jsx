@@ -14,12 +14,18 @@ export default class App extends Component {
       projectImages: null,
     }
   }
-  
+ 
   render() {
     const scrollRef = React.createRef();
     const photo = data.jumboPhotos.projectJumbo;
 
     // Clicking on a card... trigger state change
+    function showModal(e) {
+      let src = e.target.dataset.imageSrc;
+      console.log( document.getElementsByClassName('modal-photo'))
+      document.getElementsByClassName('modal-photo')[0].style.backgroundImage = `url("${src}")`;
+      document.getElementById('photo-modal').style.display = "block";
+    }
     const viewProject = (index) => {
       let techSkills = data.projects[index].techStack.map((skill, index) => {
         return (
@@ -28,7 +34,7 @@ export default class App extends Component {
       })
       let projectImages = data.projects[index].imgSrc.map((src, index) => {
         return (
-          <div className="project-image" style={{backgroundImage: `url(${src})`}} key={index}></div>
+          <div className="project-image" data-image-src={src} style={{backgroundImage: `url(${src})`}} key={index} onClick={function(e) { showModal(e); }}></div>
         )
       });
       this.setState({

@@ -1,6 +1,8 @@
 $mainheader: 32px;
 $subheader: 26px;
-$sectionheader: 16px;
+$contentheader: 22px;
+$sectionheader: 20px;
+$top-font-size: 18px;
 $main-font-size: 14px;
 $miniheader: 10px;
 $background-color: #FDFDFF;
@@ -37,7 +39,7 @@ body, html {
   width: 100%;
   min-height: 100%;
   min-width: 100%;
-  display: block;
+  display: inline-block;
 }
 
 body {
@@ -138,9 +140,11 @@ a {
 
 
 @import './comp/navigation.scss';
+@import './comp/photoModal.scss';
 @import './comp/home.scss';
 @import './comp/homeImages.scss';
 @import './comp/contactCard.scss';
 @import './comp/projectCard.scss';
 @import './comp/aboutMe.scss';
 @import './comp/projects.scss';
+@import './comp/resume.scss';
