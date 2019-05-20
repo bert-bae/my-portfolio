@@ -13,6 +13,13 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: 50%;
+      position: relative;
+      &.odd:before {
+        @include gradient(to left, #FFF, transparent);
+      }
+      &.even:before {
+        @include gradient(to right, #FFF, transparent);
+      }
     }
     .highlight-content {
       height: 100%;
@@ -37,6 +44,12 @@
         order: 2;
         height: 400px;
         width: 100%;
+        &.odd:before {
+          @include gradient(to left, transparent, transparent);
+        }
+        &.even:before {
+          @include gradient(to right, transparent, transparent);
+        }
       }
       .highlight-content {
         order: 1;

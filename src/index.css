@@ -450,6 +450,25 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50%;
+  position: relative;
+}
+.about-me-container .highlight-container .highlight-image.odd:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background-image: linear-gradient(to left, #FFF, transparent);
+}
+.about-me-container .highlight-container .highlight-image.even:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background-image: linear-gradient(to right, #FFF, transparent);
 }
 .about-me-container .highlight-container .highlight-content {
   height: 100%;
@@ -472,6 +491,24 @@ a {
     order: 2;
     height: 400px;
     width: 100%;
+  }
+  .about-me-container .highlight-container .highlight-image.odd:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    content: "";
+    background-image: linear-gradient(to left, transparent, transparent);
+  }
+  .about-me-container .highlight-container .highlight-image.even:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    content: "";
+    background-image: linear-gradient(to right, transparent, transparent);
   }
   .about-me-container .highlight-container .highlight-content {
     order: 1;

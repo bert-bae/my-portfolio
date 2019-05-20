@@ -21,6 +21,20 @@ $header_font_style: 'Roboto Slab', serif;
   background-position: $position;
 }
 
+@mixin gradient($direction, $from, $to) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background-image:
+  linear-gradient(
+    $direction,
+    $from, $to
+  );
+}
+
 @keyframes fadein {
   from { opacity: 0; }
   to   { opacity: 1; }
