@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import data from '../utils/data';
 import Jumbotron from './Jumbotron';
 import ImageCard from './ImageCard';
+import ProjectDetail from './ProjectDetail';
+import PhotoModal from './modal/PhotoModal';
 
 export default class App extends Component {
   constructor(props) {
@@ -68,6 +70,7 @@ export default class App extends Component {
     return (
       <div className="projects-container">
         <Jumbotron imageSrc={photo.filepath} photoBy={photo.photographer} imgUrl={photo.link}/>
+        <PhotoModal></PhotoModal>
         <div className="project-cards">
           <div className="scroll-container" ref={scrollRef}>
             { projectCards }
@@ -85,26 +88,12 @@ export default class App extends Component {
           </div>        
         }
         {this.state.title &&
-          <div className="project-details section-container container-column">
-            <div className="inner-container">
-              <div className="content-description">
-                <h1 className="mainheader">{this.state.title}</h1>
-                <p className="content-text">{this.state.description}</p>
-              </div>
-              <div className="content-tech">
-                <h1 className="mainheader">Tech Stack</h1>
-                <ul className="content-text">
-                  {this.state.techStack}
-                </ul>
-              </div>
-            </div>
-            <div className="content-images">
-              <h1 className="mainheader">Images</h1>
-              <div className="images-container">
-                { this.state.projectImages }
-              </div>
-            </div>
-          </div>
+          <ProjectDetail 
+            title={this.state.title}
+            description={this.state.description}
+            techStack={this.state.techStack}
+            projectImages={this.state.projectImages}
+            ></ProjectDetail>
         }
       </div>
     )
