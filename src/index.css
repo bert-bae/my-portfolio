@@ -394,6 +394,15 @@ a {
   cursor: pointer;
   overflow: hidden;
 }
+.card-container:hover {
+  transform: scale(1.01);
+  box-shadow: -3px 2px 10px rgba(0, 0, 0, 0.7);
+  transition: all 0.2s;
+}
+.card-container:hover .card-image {
+  transform: scale(1.05);
+  transition: all 0.2s;
+}
 .card-container .card-overflow {
   height: 50%;
   width: 100%;
@@ -416,10 +425,6 @@ a {
   background-color: black;
   opacity: 0.5;
   content: "";
-}
-.card-container .card-overflow .card-image:hover {
-  transform: scale(1.2);
-  transition: all 0.5s;
 }
 .card-container .card-content {
   padding: 9px;
@@ -628,9 +633,15 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50%;
-  margin: 5px;
+  margin: 14px;
   flex: 1 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   cursor: pointer;
+}
+.projects-container .project-details .content-images .images-container .project-image:hover {
+  box-shadow: -3px 2px 10px rgba(0, 0, 0, 0.7);
+  transform: scale(1.02);
+  transition: all 0.2s;
 }
 
 @media only screen and (max-width: 768px) {
