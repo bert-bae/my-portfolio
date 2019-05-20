@@ -256,7 +256,7 @@ a {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 #photo-modal .modal-content {
   position: absolute;
@@ -272,8 +272,8 @@ a {
 }
 #photo-modal .modal-content .modal-close {
   position: absolute;
-  top: 0;
-  right: -20px;
+  bottom: -25px;
+  left: calc(50% - 20.5px);
   color: #FFF;
   cursor: pointer;
 }

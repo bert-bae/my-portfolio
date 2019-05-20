@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Col } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 import { Pie } from 'react-chartjs';
 
 import Experience from './resume/Experience';

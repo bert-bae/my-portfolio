@@ -22,7 +22,6 @@ export default class App extends Component {
     // Clicking on a card... trigger state change
     function showModal(e) {
       let src = e.target.dataset.imageSrc;
-      console.log( document.getElementsByClassName('modal-photo'))
       document.getElementsByClassName('modal-photo')[0].style.backgroundImage = `url("${src}")`;
       document.getElementById('photo-modal').style.display = "block";
     }

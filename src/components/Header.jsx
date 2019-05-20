@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from "react-router-dom";
-import { Navbar, Container, Popover, OverlayTrigger } from 'react-bootstrap';
-import data from '../utils/data';
+import { Navbar } from 'react-bootstrap';
 
 export default class Header extends Component {
   constructor(props) {
