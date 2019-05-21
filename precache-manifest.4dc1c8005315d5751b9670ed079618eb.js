@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/bert-bae/my-portfolio/static/css/main.ae527090.chunk.css"
   },
   {
-    "revision": "da3397a54dbbd68427bd29b5f162194c",
+    "revision": "12ee9f7fb648a7a9f4c3915af9537259",
     "url": "/bert-bae/my-portfolio/index.html"
   }
 ];
