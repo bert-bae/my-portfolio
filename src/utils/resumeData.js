@@ -1,18 +1,16 @@
 module.exports = {
-  contactInfo: {
-    name: "Elbert S. Bae",
-    phone: "(778) 908-0350",
-    email: "elbert.bae@gmail.com",
-    github: "github.com/bert-bae",
-    linkedin: "linkedin.com/in/bert92",
-    imgPath: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV2WniLsEKOfMobit0LyCMxvq8SzFBzwQTwcpFqq7YsHcWylOK2A",
-  },
-
-  education: {
-    school: "Simon Fraser University",
-    duration: "September 2012 - December 2015",
-    study: "B.A. Psychology, Minor in Business Administrations",
-  },
+  education: [
+    {
+      title: "Lighthouse Labs",
+      duration: "Oct 2018 - Jan 2019",
+      responsibilities: ["Fullstack Web Development"],
+    },
+    {
+      title: "Simon Fraser University",
+      duration: "Sept 2012 - Dec 2015",
+      responsibilities: ["B.A. Psychology, Minor in Business Administrations"],
+    }
+  ],
 
   devSkills: [
     {
@@ -182,8 +180,8 @@ module.exports = {
       ]
     },
     {
-      title: "Self-Employed as Service & Sales Trainer",
-      company: "Self-Employed (Contract basis)",
+      title: "Service & Sales Trainer",
+      company: "Self-Employed",
       address: "Lower Mainland",
       duration: "Feb 2018 - Current",
       responsibilities: [
@@ -207,12 +205,44 @@ module.exports = {
     },
   ],
 
+  volunteerExperience: [
+    {
+      title: "YAC Council",
+      company: "YMCA of Greater Vancouver",
+      address: "Vancouver, BC",
+      duration: "Apr 2016 – Oct 2018",
+      responsibilities: []
+    },
+    {
+      title: "Peer Health Educator",
+      company: "Simon Fraser University",
+      address: "Burnaby, BC",
+      duration: "Sep 2014 – Mar 2016",
+      responsibilities: []
+    },
+    {
+      title: "Wildlife Conservation",
+      company: "International Volunteer HQ (NPO)",
+      address: "Ambalangoda, Sri Lanka",
+      duration: "Jul 2014 – Aug 2014  ",
+      responsibilities: []
+    },
+    {
+      title: "Tutor",
+      company: "International Volunteer HQ (NPO)",
+      address: "Faridabad, India",
+      duration: "Jun 2014 – Jul 2014",
+      responsibilities: []
+    },
+  ],
+  
   interests: [
     'Rock climbing',
     'Hiking',
     'Camping',
     'Swimming',
-    'Travelling'
+    'Travelling',
+    'Learning'
   ]
     
 }

@@ -677,6 +677,16 @@ a {
   width: 100%;
   display: inline-block;
 }
+.resume-container .mainheader {
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+  margin-bottom: 50px;
+}
+.resume-container .subsection {
+  margin-bottom: 50px;
+}
+.resume-container .subsection .subheader {
+  border-bottom: 1px solid black;
+}
 .resume-container .skills-container {
   display: flex;
   flex-flow: row wrap;
@@ -685,7 +695,7 @@ a {
   margin-top: 35px;
 }
 .resume-container .skills-container .dev-skill {
-  flex: 1 0 10%;
+  flex: 0 0 10%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -695,7 +705,7 @@ a {
   margin: 10px;
 }
 .resume-container .resume-content {
-  margin: 0 10px;
+  margin: 30px 10px;
 }
 .resume-container .resume-content .resume-header {
   display: flex;
@@ -715,11 +725,35 @@ a {
 }
 .resume-container .resume-content .job-organization .city {
   font-size: 14px;
-  padding-left: 20px;
   opacity: 0.8;
 }
 .resume-container .resume-content .responsibilities-container {
   margin: 20px 0 !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .resume-container .resume-content .resume-header {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .resume-container .resume-content .resume-header .job-title {
+    font-size: 18px;
+  }
+  .resume-container .resume-content .resume-header .job-duration {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+  .resume-container .resume-content .job-organization {
+    font-size: 20px;
+  }
+  .resume-container .resume-content .job-organization .city {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+  .resume-container .resume-content .responsibilities-container {
+    margin: 20px 0 !important;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

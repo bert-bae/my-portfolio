@@ -2,6 +2,16 @@
   height: 100%;
   width: 100%;
   display: inline-block;
+  .mainheader {
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+  }
+  .subsection {
+    margin-bottom: 50px;
+    .subheader {
+      border-bottom: 1px solid black;
+    }
+  }
   .skills-container {
     display: flex;
     flex-flow: row wrap;
@@ -9,7 +19,7 @@
     height: auto;
     margin-top: 35px;
     .dev-skill {
-      flex: 1 0 10%;
+      flex: 0 0 10%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -22,7 +32,7 @@
 
   // Experiences section
   .resume-content {
-    margin: 0 10px;
+    margin: 30px 10px;
     .resume-header {
       display: flex;
       flex-direction: row;
@@ -40,12 +50,35 @@
       font-size: $sectionheader;
       .city {
         font-size: $main-font-size;
-        padding-left: 20px;
         opacity: 0.8;
       }
     }
     .responsibilities-container {
       margin: 20px 0!important;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .resume-container {
+    .resume-content {
+      .resume-header {
+        flex-direction: column;
+        align-items: flex-start;
+        .job-title {
+          font-size: $top-font-size;
+        }
+      }
+      .job-organization {
+        font-size: $top-font-size;
+        .city {
+          font-size: $main-font-size;
+          opacity: 0.8;
+        }
+      }
+      .responsibilities-container {
+        margin: 20px 0!important;
+      }
     }
   }
 }
