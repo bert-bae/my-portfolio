@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { Col } from 'react-bootstrap';
-import { Pie } from 'react-chartjs';
 
+import DevSkills from './resume/DevSkills';
 import Experience from './resume/Experience';
 
 import data from '../utils/data';
+import { workExperience, devSkills } from '../utils/resumeData';
 import Jumbotron from './Jumbotron';
 
 export default class Resume extends Component {
@@ -13,110 +14,32 @@ export default class Resume extends Component {
   }
   render() {
     const photo = data.jumboPhotos.resumeJumbo;
-    let pieData = [
-      {
-        value: 300,
-        color:"#F7464A",
-        highlight: "#FF5A5E",
-        label: "Red"
-      },
-      {
-        value: 50,
-        color: "#46BFBD",
-        highlight: "#5AD3D1",
-        label: "Green"
-      },
-      {
-        value: 100,
-        color: "#FDB45C",
-        highlight: "#FFC870",
-        label: "Yellow"
-      }
-    ];
-    let options = {
-      //Boolean - Whether we should show a stroke on each segment
-      segmentShowStroke : true,
-    
-      //String - The colour of each segment stroke
-      segmentStrokeColor : "#fff",
-    
-      //Number - The width of each segment stroke
-      segmentStrokeWidth : 2,
-    
-      //Number - The percentage of the chart that we cut out of the middle
-      percentageInnerCutout : 0, // This is 0 for Pie charts
-    
-      //Number - Amount of animation steps
-      animationSteps : 75,
-    
-      //String - Animation easing effect
-      animationEasing : "easeOutBounce",
-    
-      //Boolean - Whether we animate the rotation of the Doughnut
-      animateRotate : true,
-    
-      //Boolean - Whether we animate scaling the Doughnut from the centre
-      animateScale : false,
-      
-      //String - A legend template
-      legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"><%if(segments[i].label){%><%=segments[i].label%><%}%></span></li><%}%></ul>"
-    };
+    const formatWorkExp = workExperience.map((job, index) => {
+      return (
+        <Experience job={job} key={"exp" + index}/>
+      );
+    })
+    const formatDevSkills = devSkills.map((skill, index) => {
+      return (
+        <DevSkills devSkill={skill} key={"skill" + index}></DevSkills>
+      )
+    })
+
 
     return (
       <div className="resume-container">
         <Jumbotron imageSrc={photo.filepath} photoBy={photo.photographer} imgUrl={photo.link}/>
-        <div className="section-container container-column" fluid={true}>
+        <div className="section-container container-column">
           <h1 className="mainheader">RESUME</h1>
-          <Col className="subsection bs-column" fluid={true}>
+          <Col className="subsection bs-column">
             <h1 className="subheader">Developer Skills</h1>
             <Col className="chartjs-graph skills-container">
-              <div className="dev-skill">
-                <Pie data={pieData} options={options} width="50" height="50"/>
-                <p className="miniheader">SQL</p>
-              </div>
-              <div className="dev-skill">
-                <Pie data={pieData} options={options} width="50" height="50"/>
-                <p className="miniheader">SQL</p>
-              </div> 
-              <div className="dev-skill">
-                <Pie data={pieData} options={options} width="50" height="50"/>
-                <p className="miniheader">SQL</p>
-              </div> 
-              <div className="dev-skill">
-                <Pie data={pieData} options={options} width="50" height="50"/>
-                <p className="miniheader">SQL</p>
-              </div> 
-              <div className="dev-skill">
-                <Pie data={pieData} options={options} width="50" height="50"/>
-                <p className="miniheader">SQL</p>
-              </div> 
-              <div className="dev-skill">
-                <Pie data={pieData} options={options} width="50" height="50"/>
-                <p className="miniheader">SQL</p>
-              </div> 
-              <div className="dev-skill">
-                <Pie data={pieData} options={options} width="50" height="50"/>
-                <p className="miniheader">SQL</p>
-              </div>
+              {formatDevSkills}
             </Col> 
           </Col>
           <Col className="subsection bs-column" lg={12} sm={12}>
             <h1 className="subheader">Experiences</h1>
-            {/* <div className="resume-content">
-              <div className="resume-header">
-                <p className="job-title">Job Title</p>
-                <p className="job-duration">Sept 12 - Sept 12, 2019</p>
-              </div>
-              <p className="job-organization">CoLinkz Media<span className="city">Vancouver, BC</span></p>
-              <div className="responsibilities-container">
-                <ul>
-                  <li>Responsibility 1</li>
-                  <li>Responsibility 2</li>
-                  <li>Responsibility 3</li>
-                  <li>Responsibility 4</li>
-                </ul>
-              </div>
-            </div> */}
+            {formatWorkExp}
           </Col>
           <Col className="subsection bs-column" lg={12} sm={12}>
             <h1 className="subheader">Volunteer Experience</h1>
