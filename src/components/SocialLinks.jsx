@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Col, OverlayTrigger, Popover } from 'react-bootstrap';
+import { Container, OverlayTrigger, Popover } from 'react-bootstrap';
 
 export default function SocialLinks() {
   const popover =  (
@@ -21,34 +21,34 @@ export default function SocialLinks() {
     </Popover>
   )
   return (
-    <div className="section-container">
-      <Col className="center" lg={4} md={4} sm={4}>
+    <div className="contact-container">
+      <div className="center contact-icon">
         <a className="profile-icons" href="https://github.com/bert-bae">
-          <span className="fa-stack fa-2x fa-2x">
+          <span className="fa-stack">
             <i className="circle-rotate fas fa-circle-notch fa-stack-2x"></i>
             <i className="circle-rotate-slow fab fa-github fa-stack-1x"></i>
           </span>
         </a>
-      </Col>
-      <Col className="center" lg={4} md={4} sm={4}>
+      </div>
+      <div className="center contact-icon">
       <a className="profile-icons" href="https://www.linkedin.com/in/bert92/">
-        <span className="fa-stack fa-2x fa-2x">
+        <span className="fa-stack">
           <i className="circle-rotate fas fa-circle-notch fa-stack-2x"></i>
           <i className="circle-rotate-slow fab fa-linkedin-in fa-stack-1x"></i>
         </span>
       </a>
-      </Col>
-      <Col className="center" lg={4} md={4} sm={4}>
+      </div>
+      <div className="center contact-icon contact-card">
         <OverlayTrigger 
           trigger="click" 
           placement="top" 
           overlay={popover}>
-          <span className="fa-stack fa-2x fa-2x profile-icons contact-info">
+          <span className="fa-stack profile-icons contact-info">
             <i className="circle-rotate fas fa-circle-notch fa-stack-2x"></i>
             <i className="circle-rotate-slow fas fa-user-circle fa-stack-1x"></i>
           </span>
         </OverlayTrigger>
-      </Col>
+      </div>
     </div>
   )
 }
