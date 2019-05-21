@@ -43,7 +43,6 @@ export default class Header extends Component {
         
       }
     }
-    let page = document.querySelector('.nav-button.active').text.toLowerCase();
 
     window.addEventListener('scroll', getScrollPos, true);
     document.getElementById('collapse-toggle').addEventListener('click', toggleMobileMenu, true);
