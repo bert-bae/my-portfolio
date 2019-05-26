@@ -42,6 +42,13 @@ export default {
       projectUrl: "https://github.com/bert-bae/outdoodle",
     },
     {
+      title: "Layer-CSS",
+      description: "Easy to use client-side Javascript and CSS package for applying overlay effects to your elements. Layer-CSS gives you a quick insight into creating overlays, gradients, and shadows on your containers. Specific class names apply the overlays you want or it can be initiated by client-side Javascript to quickly apply Layer-CSS styles to a target Element. \n\nSimply load index.css to your stylesheet assets and layer-css.js to your Javascript files which contains global functions to apply styling to target elements and call them in your client-side Javascript.",
+      techStack: ["Javascript", "jQuery", "SaSS"],
+      imgSrc: ["images/projects/layer0.png", "images/projects/layer1.png", "images/projects/layer2.png", "images/projects/layer3.png"],
+      projectUrl: "https://github.com/bert-bae/layer-css",
+    },
+    {
       title: "Colinkz Media",
       description: "Colinkz is founded by Noi Soudarack. It is intended to be a platform for communities to connect with other cultural groups by providing access to events, restaurants, and directories to local organizations for many cultural groups. As a software developer for Colinkz, I work closely with the founder, CTO, and designers to develop and maintain existing and new features for the company website.\n\nIf interested, learn more about what we do and support our goal of increasing multicultural diversity across the world!\n\n Link:  https://www.colinkz.com",
       techStack: ["Unfortunately this information cannot be released as it is the intellectual property of the organization!"],
