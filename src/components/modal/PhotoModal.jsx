@@ -25,8 +25,6 @@ export default class PhotoModal extends Component {
         <div className="modal-content">
           <div className="modal-photo" data-image-index="null" style={{ backgroundImage: `url("${this.props.imageSrc})`}}>
             <div className="modal-close" onClick={(e) => { closeModal(e) }}>Close</div>
-            <div className="modal-next" onClick={(e) => { nextImage(e) }}>Close</div>
-            <div className="modal-prev" onClick={(e) => { prevImage(e) }}>Close</div>
           </div>
         </div>
       </div>
