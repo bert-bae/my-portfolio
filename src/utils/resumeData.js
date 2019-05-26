@@ -47,6 +47,17 @@ module.exports = {
       }]
     },
     {
+      name: 'Bootstrap', 
+      pieData: [{
+        value: 80,
+        color: "#F7464A",
+      },
+      {
+        value: 20,
+        color: "black",
+      }]
+    },
+    {
       name: 'Javascript', 
       pieData: [{
         value: 75,
