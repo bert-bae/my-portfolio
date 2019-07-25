@@ -20,7 +20,7 @@ export default class App extends Component {
   render() {
     const scrollRef = React.createRef();
     const photo = data.jumboPhotos.projectJumbo;
-    console.log(data.projects);
+    
     // Clicking on a card... trigger state change
     function showModal(e) {
       let src = e.target.dataset.imageSrc;

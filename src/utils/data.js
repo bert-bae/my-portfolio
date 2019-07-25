@@ -21,6 +21,13 @@ export default {
   // Project mock data
   projects: [
     {
+      title: "HapyHr",
+      description: "HapyHr is a mock site that helps users identify happy hour deals near them. It is a simple API, website, and future mobile application. Restaurants, bars, and pubs can easily list themselves for users to locate amazing deals nearby.\n\nThis is my current project.",
+      techStack: ["React", "NextJS", "MySql", "Objection", "SaSS", "Express", "Knex"],
+      imgSrc: [],
+      projectUrl: "https://github.com/bert-bae/hapy_hr",
+    },
+    {
       title: "NuBrew",
       description: "NuBrew is an application that allows users to vote on their craft beer drinks and keep track of favorited drinks over time. As users expand their set of craft beers tried over time, the application will provide recommendations based on their previous likes based on IBU and category/style of drink. Of course, users need to be able to take that plunge and explore uncharted territories by trying something new by random as well, even if they really don't like that one style, taste changes over time!\n\nWe want to make it as easy as possible, so for those that bought their drinks with labels, the application was created while experimenting machine learning and label recognition using Google AutoML Vision.\n\nIn collaboration with Adam Romeo (https://adamromeo.dev/)",
       techStack: ["React-Native", "PostgreSql", "Knex", "NodeJS", "Express",  "SaSS", "Google AutoML"],

@@ -38,17 +38,72 @@ module.exports = {
     {
       name: 'HTML/CSS/SASS', 
       pieData: [{
-        value: 80,
+        value: 95,
         color: "#F7464A",
       },
       {
-        value: 20,
+        value: 5,
         color: "black",
       }]
     },
     {
       name: 'Bootstrap', 
       pieData: [{
+        value: 90,
+        color: "#F7464A",
+      },
+      {
+        value: 10,
+        color: "black",
+      }]
+    },
+    {
+      name: 'Express', 
+      pieData: [{
+        value: 90,
+        color: "#F7464A",
+      },
+      {
+        value: 10,
+        color: "black",
+      }]
+    },
+    {
+      name: 'Javascript', 
+      pieData: [{
+        value: 90,
+        color: "#F7464A",
+      },
+      {
+        value: 10,
+        color: "black",
+      }]
+    },
+    {
+      name: 'jQuery', 
+      pieData: [{
+        value: 90,
+        color: "#F7464A",
+      },
+      {
+        value: 10,
+        color: "black",
+      }]
+    },
+    {
+      name: 'AJAX', 
+      pieData: [{
+        value: 90,
+        color: "#F7464A",
+      },
+      {
+        value: 10,
+        color: "black",
+      }]
+    },
+    {
+      name: 'SQL', 
+      pieData: [{
         value: 80,
         color: "#F7464A",
       },
@@ -58,7 +113,18 @@ module.exports = {
       }]
     },
     {
-      name: 'Javascript', 
+      name: 'Objection', 
+      pieData: [{
+        value: 80,
+        color: "#F7464A",
+      },
+      {
+        value: 20,
+        color: "black",
+      }]
+    },
+    {
+      name: 'Nodejs', 
       pieData: [{
         value: 75,
         color: "#F7464A",
@@ -69,7 +135,7 @@ module.exports = {
       }]
     },
     {
-      name: 'jQuery', 
+      name: 'Babel', 
       pieData: [{
         value: 75,
         color: "#F7464A",
@@ -80,18 +146,7 @@ module.exports = {
       }]
     },
     {
-      name: 'AJAX', 
-      pieData: [{
-        value: 75,
-        color: "#F7464A",
-      },
-      {
-        value: 25,
-        color: "black",
-      }]
-    },
-    {
-      name: 'SQL', 
+      name: 'React', 
       pieData: [{
         value: 70,
         color: "#F7464A",
@@ -102,29 +157,40 @@ module.exports = {
       }]
     },
     {
-      name: 'Nodejs', 
+      name: 'NextJS', 
       pieData: [{
-        value: 60,
+        value: 70,
         color: "#F7464A",
       },
       {
-        value: 40,
+        value: 30,
         color: "black",
       }]
     },
     {
-      name: 'React', 
+      name: 'Stripe API', 
       pieData: [{
-        value: 40,
+        value: 50,
         color: "#F7464A",
       },
       {
-        value: 60,
+        value: 50,
         color: "black",
       }]
     },
     {
       name: 'UI/UX', 
+      pieData: [{
+        value: 50,
+        color: "#F7464A",
+      },
+      {
+        value: 50,
+        color: "black",
+      }]
+    },
+    {
+      name: 'Webpack', 
       pieData: [{
         value: 40,
         color: "#F7464A",
@@ -187,7 +253,10 @@ module.exports = {
         "Working with UI/UX designer wireframes to develop website designs and features.",
         "Participating in business development discussions with the team for future development direction.",
         "Interacting remotely or in-person with team members on daily Agile scrums.",
-        "Fullstack development of the company site and maintaining bug fixes, style revisions, and future development."
+        "Fullstack development of the company site and maintaining bug fixes, style revisions, and future development.",
+        "Implementing APIs to gather information to speed up event creation and marketing channels.",
+        "Implementing Stripe API to begin payment and market business channels.",
+        "Implementing React using Webpack and Babel to compile its implementation into a an existing Express and EJS project."
       ]
     },
     {
