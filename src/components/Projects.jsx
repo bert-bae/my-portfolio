@@ -69,7 +69,7 @@ export default class App extends Component {
     })
     return (
       <div className="projects-container">
-        <Jumbotron imageSrc={photo.filepath} photoBy={photo.photographer} imgUrl={photo.link}/>
+        <Jumbotron imageSrc={photo.filepath} photoBy={photo.photographer} imgUrl={photo.link} header={data.jumboPhotos.projectJumbo.header}/>
         <PhotoModal></PhotoModal>
         <div className="project-cards">
           <div className="scroll-container" ref={scrollRef}>

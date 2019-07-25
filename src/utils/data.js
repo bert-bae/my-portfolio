@@ -4,17 +4,20 @@ export default {
     homeJumbo: {
       photographer: "Nate Grant",
       filepath: "images/home-jumbo.jpg",
-      link: "https://unsplash.com/@nateggrant"
+      link: "https://unsplash.com/@nateggrant",
+      header: "About"
     },
     projectJumbo: {
       photographer: "Galymzhan Abdugalimov",
       filepath: "images/project-jumbo.jpg",
-      link: "https://unsplash.com/@naffiq"
+      link: "https://unsplash.com/@naffiq",
+      header: "Projects"
     },
     resumeJumbo: {
       photographer: "Clark Young",
       filepath: "images/resume-jumbo.jpg",
-      link:"https://unsplash.com/@cbyoung"
+      link:"https://unsplash.com/@cbyoung",
+      header: "Resume"
     }
   },
 

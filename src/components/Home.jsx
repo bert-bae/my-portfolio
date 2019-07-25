@@ -13,7 +13,7 @@ export default class Home extends Component {
     const photo = data.jumboPhotos.homeJumbo;
     return (
       <div className="home-container">
-        <Jumbotron imageSrc={photo.filepath} photoBy={photo.photographer} imgUrl={photo.link}/>
+        <Jumbotron imageSrc={photo.filepath} photoBy={photo.photographer} imgUrl={photo.link} header={data.jumboPhotos.homeJumbo.header}/>
         <AboutMe imgSrc={"/images/home-img1.jpg"}/>
       </div>
     )

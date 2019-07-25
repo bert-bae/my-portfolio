@@ -8,10 +8,60 @@
   }
   .subsection {
     margin-bottom: 50px;
+    .resume-name {
+      font-size: 36px;
+      margin-bottom: 25px;
+    }
     .subheader {
       border-bottom: 1px solid black;
     }
+    .about-me {
+      margin-top: 35px;
+    }
   }
+
+  // Resume contact section...
+  .resume-contact-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(auto, 1fr));
+    grid-template-rows: repeat(1, minmax(auto 1fr));
+    grid-gap: 15px;
+    .resume-contact {
+      grid-column: span 3;
+      background-color: rgba(255, 0, 0, 0.8);
+      border-radius: 8px;
+      display: grid;
+      grid-template-columns: repeat(1, minmax(auto, 1fr));
+      grid-template-rows: repeat(auto, minmax(auto, 1fr));
+      grid-gap: 5px;
+      padding: 5px 10px;
+      .contact-text {
+        color: #FFF;
+        font-size: 12px;
+        font-weight: bold;
+        display: grid;
+        grid-template-columns: repeat(12, minmax(auto, 1fr));
+        grid-template-rows: repeat(1, minmax(auto 1fr));
+        margin: 0;
+        align-items: center;
+        justify-items: start;
+        .link {
+          cursor: pointer;
+        }
+        .fa-stack {
+          grid-column: span 3;
+        }
+        label {
+          grid-column: span 9;
+          margin: 0;
+        }
+      }
+    }
+    .resume-about-me {
+      grid-column: span 9;
+    }
+  }
+
   .skills-container {
     display: flex;
     flex-flow: row wrap;
@@ -59,6 +109,23 @@
   }
 }
 
+@media only screen and (max-width: 992px) {
+  .resume-container {
+    .resume-contact-grid {
+      grid-template-columns: repeat(1, minmax(auto, 1fr));
+      grid-template-rows: repeat(2, minmax(auto 1fr));
+      .resume-contact {
+        grid-column: auto;
+        grid-template-columns: repeat(2, minmax(auto, 1fr));
+        grid-template-rows: repeat(3, minmax(auto, 1fr));
+      }
+      .resume-about-me {
+        grid-column: auto;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .resume-container {
     .resume-content {
@@ -78,6 +145,19 @@
       }
       .responsibilities-container {
         margin: 20px 0!important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .resume-container {
+    .resume-contact-grid {
+      grid-template-columns: repeat(1, minmax(auto, 1fr));
+      grid-template-rows: repeat(2, minmax(auto 1fr));
+      .resume-contact {
+        grid-template-columns: repeat(1, minmax(auto, 1fr));
+        grid-template-rows: repeat(5, minmax(auto, 1fr));
       }
     }
   }

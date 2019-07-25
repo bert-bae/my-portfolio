@@ -7,7 +7,7 @@ export default function SocialLinks() {
       <Container className="contact-container">
         <Container className="section-container container-column">
           <p className="sectionheader">Personal Email</p>
-          <a className="content-text" href="mailto:elbert.bae@gmail.com?Subject=Mail%20from%20CodeBert">elbert.bae@gmail.com</a>
+          <a className="content-text" href={`mailto:elbert.bae@gmail.com?Subject=Mail%20from%20CodeBert`}>elbert.bae@gmail.com</a>
         </Container>
         <Container className="section-container container-column">
           <p className="sectionheader">Work Email</p>

@@ -1,4 +1,13 @@
 module.exports = {
+  contactInfo: {
+    address: "3970 Carrigan Court, Burnaby, BC, V3N 4S5",
+    email: "elbert.bae@gmail.com",
+    number: "(778) 908-0350",
+    
+  },
+
+  aboutMe: "Full-stack software developer working in the NodeJS environment with experience developing server-side and client-side web applications using libraries such as React, NextJS, EJS, Express, 3rd party APIs, and SQL databases. With my current knowledge around MVC architecture and program design, able to write clean and organized code, but always seeking more information to improve my capabilities. Significant experience in management, training, and sales with clear written and spoken communication skills between colleagues and clients mostly in problem resolution focused environments to achieve results.",
+
   education: [
     {
       title: "Lighthouse Labs",

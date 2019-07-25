@@ -294,12 +294,10 @@ a {
   cursor: pointer;
 }
 
-.home-images {
+.jumbotron-images {
   height: 500px;
   width: 100%;
   padding: 0;
-  display: flex;
-  flex-direction: row;
 }
 
 .img-overflow {
@@ -308,6 +306,16 @@ a {
   padding: 0;
   overflow: hidden;
   position: relative;
+}
+.img-overflow .jumbotron-header {
+  position: absolute;
+  top: calc(50% - 36px);
+  left: calc(50% - 170px);
+  font-size: 60px;
+  width: 340px;
+  text-align: center;
+  color: black;
+  text-shadow: -2px -2px 0 #FFF, 2px -2px 0 #FFF, -2px 2px 0 #FFF, 2px 2px 0 #FFF;
 }
 .img-overflow .photo-credit {
   display: none;
@@ -322,7 +330,7 @@ a {
   color: #FFF;
 }
 
-.home-jumbo {
+.jumbo {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50%;
@@ -337,7 +345,7 @@ a {
   align-items: flex-end;
 }
 
-.home-jumbo::before {
+.jumbo::before {
   position: absolute;
   display: block;
   content: "";
@@ -349,7 +357,7 @@ a {
   opacity: 0.5;
 }
 
-.img-overflow:hover .home-jumbo {
+.img-overflow:hover .jumbo {
   transform: scale(1.2);
   transition: all 0.5s;
 }
@@ -364,6 +372,26 @@ a {
   transition: all 0.1s;
 }
 
+@media only screen and (max-width: 768px) {
+  .jumbotron-images {
+    height: 400px;
+  }
+
+  .img-overflow .jumbotron-header {
+    font-size: 46px;
+    top: calc(50% - 23px);
+  }
+}
+@media only screen and (max-width: 568px) {
+  .jumbotron-images {
+    height: 300px;
+  }
+
+  .img-overflow .jumbotron-header {
+    font-size: 32px;
+    top: calc(50% - 16px);
+  }
+}
 #contact-popover {
   border: black 1px solid;
   background-color: #FDFDFF;
@@ -683,8 +711,55 @@ a {
 .resume-container .subsection {
   margin-bottom: 50px;
 }
+.resume-container .subsection .resume-name {
+  font-size: 36px;
+  margin-bottom: 25px;
+}
 .resume-container .subsection .subheader {
   border-bottom: 1px solid black;
+}
+.resume-container .subsection .about-me {
+  margin-top: 35px;
+}
+.resume-container .resume-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(auto, 1fr));
+  grid-template-rows: repeat(1, minmax(auto 1fr));
+  grid-gap: 15px;
+}
+.resume-container .resume-contact-grid .resume-contact {
+  grid-column: span 3;
+  background-color: rgba(255, 0, 0, 0.8);
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(auto, 1fr));
+  grid-template-rows: repeat(auto, minmax(auto, 1fr));
+  grid-gap: 5px;
+  padding: 5px 10px;
+}
+.resume-container .resume-contact-grid .resume-contact .contact-text {
+  color: #FFF;
+  font-size: 12px;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(auto, 1fr));
+  grid-template-rows: repeat(1, minmax(auto 1fr));
+  margin: 0;
+  align-items: center;
+  justify-items: start;
+}
+.resume-container .resume-contact-grid .resume-contact .contact-text .link {
+  cursor: pointer;
+}
+.resume-container .resume-contact-grid .resume-contact .contact-text .fa-stack {
+  grid-column: span 3;
+}
+.resume-container .resume-contact-grid .resume-contact .contact-text label {
+  grid-column: span 9;
+  margin: 0;
+}
+.resume-container .resume-contact-grid .resume-about-me {
+  grid-column: span 9;
 }
 .resume-container .skills-container {
   display: flex;
@@ -730,6 +805,20 @@ a {
   margin: 20px 0 !important;
 }
 
+@media only screen and (max-width: 992px) {
+  .resume-container .resume-contact-grid {
+    grid-template-columns: repeat(1, minmax(auto, 1fr));
+    grid-template-rows: repeat(2, minmax(auto 1fr));
+  }
+  .resume-container .resume-contact-grid .resume-contact {
+    grid-column: auto;
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
+    grid-template-rows: repeat(3, minmax(auto, 1fr));
+  }
+  .resume-container .resume-contact-grid .resume-about-me {
+    grid-column: auto;
+  }
+}
 @media only screen and (max-width: 768px) {
   .resume-container .resume-content .resume-header {
     flex-direction: column;
@@ -747,6 +836,16 @@ a {
   }
   .resume-container .resume-content .responsibilities-container {
     margin: 20px 0 !important;
+  }
+}
+@media only screen and (max-width: 568px) {
+  .resume-container .resume-contact-grid {
+    grid-template-columns: repeat(1, minmax(auto, 1fr));
+    grid-template-rows: repeat(2, minmax(auto 1fr));
+  }
+  .resume-container .resume-contact-grid .resume-contact {
+    grid-template-columns: repeat(1, minmax(auto, 1fr));
+    grid-template-rows: repeat(5, minmax(auto, 1fr));
   }
 }
 .footer-section {

@@ -1,11 +1,12 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 
-export default function Jumbotron({ imageSrc, photoBy, imgUrl }) {
+export default function Jumbotron({ imageSrc, photoBy, imgUrl, header }) {
   return (
-    <Container className="home-images" fluid>
+    <Container className="jumbotron-images" fluid>
       <div className="img-overflow">
-        <Container className="home-jumbo" fluid style={{backgroundImage: `url(${imageSrc})`}}></Container>
+        <Container className="jumbo" fluid style={{backgroundImage: `url(${imageSrc})`}}></Container>
+        <h1 className="jumbotron-header">{ header }</h1>
         <a href={imgUrl}>
           <div className="photo-credit">
             <p className="miniheader">Photo by: {photoBy}</p>

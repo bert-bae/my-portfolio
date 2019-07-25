@@ -5,7 +5,7 @@ import DevSkills from './resume/DevSkills';
 import Experience from './resume/Experience';
 
 import data from '../utils/data';
-import { workExperience, devSkills, volunteerExperience, education, interests } from '../utils/resumeData';
+import { workExperience, devSkills, volunteerExperience, education, interests, aboutMe, contactInfo } from '../utils/resumeData';
 import Jumbotron from './Jumbotron';
 
 export default class Resume extends Component {
@@ -42,9 +42,54 @@ export default class Resume extends Component {
 
     return (
       <div className="resume-container">
-        <Jumbotron imageSrc={photo.filepath} photoBy={photo.photographer} imgUrl={photo.link}/>
+        <Jumbotron imageSrc={photo.filepath} photoBy={photo.photographer} imgUrl={photo.link} header={data.jumboPhotos.resumeJumbo.header}/>
         <div className="section-container container-column">
-          <h1 className="mainheader">RESUME</h1>
+          <Col className="subsection bs-column">
+            <h1 className="resume-name">Elbert Bae</h1>
+            <div className="resume-contact-grid">
+              <div className="resume-contact">
+                <p className="contact-text">
+                  <span className="fa-stack">
+                    <i className="circle-rotate fas fa-circle-notch fa-stack-2x"></i>
+                    <i className="circle-rotate-slow fas fa-home fa-stack-1x"></i>
+                  </span>
+                  <label>{contactInfo.address}</label>
+                </p>
+                <p className="contact-text">
+                  <span className="fa-stack">
+                    <i className="circle-rotate fas fa-circle-notch fa-stack-2x"></i>
+                    <i className="circle-rotate-slow far fa-envelope fa-stack-1x"></i>
+                  </span>
+                  <label>{contactInfo.email}</label>
+                </p>
+                <p className="contact-text">
+                  <span className="fa-stack">
+                    <i className="circle-rotate fas fa-circle-notch fa-stack-2x"></i>
+                    <i className="circle-rotate-slow fas fa-phone fa-stack-1x"></i>
+                  </span>
+                  <label>{contactInfo.number}</label>
+                </p>
+                <a href="https://github.com/bert-bae" className="contact-text">
+                  <span className="fa-stack">
+                    <i className="circle-rotate fas fa-circle-notch fa-stack-2x"></i>
+                    <i className="circle-rotate-slow fab fa-github fa-stack-1x"></i>
+                  </span>
+                  <label className="link">GitHub Profile</label>
+                </a>
+                <a href="https://www.linkedin.com/in/bert92/" className="contact-text">
+                  <span className="fa-stack">
+                    <i className="circle-rotate fas fa-circle-notch fa-stack-2x"></i>
+                    <i className="circle-rotate-slow fab fa-linkedin-in fa-stack-1x"></i>
+                  </span>
+                  <label className="link">LinkedIn Profile</label>
+                </a>
+              </div>
+              <div className="resume-about-me">
+                <h1 className="subheader">About Me</h1>
+                <p className="about-me">{ aboutMe }</p>
+              </div>
+            </div>
+          </Col>
           <Col className="subsection bs-column">
             <h1 className="subheader">Developer Skills</h1>
             <Col className="chartjs-graph skills-container">
