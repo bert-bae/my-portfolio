@@ -751,6 +751,10 @@ a {
 .resume-container .resume-contact-grid .resume-contact .contact-text .link {
   cursor: pointer;
 }
+.resume-container .resume-contact-grid .resume-contact .contact-text .link:hover {
+  transform: scale(1.03);
+  transition: all 0.2s;
+}
 .resume-container .resume-contact-grid .resume-contact .contact-text .fa-stack {
   grid-column: span 3;
 }
@@ -846,6 +850,37 @@ a {
   .resume-container .resume-contact-grid .resume-contact {
     grid-template-columns: repeat(1, minmax(auto, 1fr));
     grid-template-rows: repeat(5, minmax(auto, 1fr));
+  }
+}
+@media print {
+  body {
+    margin: 0;
+    color: #000;
+    background-color: #fff;
+    padding: 0 !important;
+  }
+
+  @page {
+    margin: 2cm !important;
+  }
+  .contact-text {
+    color: black !important;
+  }
+
+  .section-container {
+    padding: 0 !important;
+  }
+
+  #main-nav {
+    display: none !important;
+  }
+
+  .footer-section {
+    display: none !important;
+  }
+
+  .jumbotron-images {
+    display: none !important;
   }
 }
 .footer-section {

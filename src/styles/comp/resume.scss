@@ -47,6 +47,10 @@
         justify-items: start;
         .link {
           cursor: pointer;
+          &:hover {
+            transform: scale(1.03);
+            transition: all 0.2s;
+          }
         }
         .fa-stack {
           grid-column: span 3;
@@ -160,5 +164,32 @@
         grid-template-rows: repeat(5, minmax(auto, 1fr));
       }
     }
+  }
+}
+
+@media print {
+  body {
+    margin: 0;
+    color: #000;
+    background-color: #fff;
+    padding: 0!important;
+  }
+  @page {
+    margin: 2cm!important;
+  }
+  .contact-text {
+    color: black!important;
+  }
+  .section-container {
+    padding: 0!important;    
+  }
+  #main-nav {
+    display: none!important;
+  }
+  .footer-section {
+    display: none!important;
+  }
+  .jumbotron-images {
+    display: none!important;
   }
 }
