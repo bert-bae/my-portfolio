@@ -69,6 +69,13 @@ export default class Resume extends Component {
                   </span>
                   <label>{contactInfo.number}</label>
                 </p>
+                <a href="https://bert-bae.github.io/my-portfolio" className="contact-text">
+                  <span className="fa-stack">
+                    <i className="circle-rotate fas fa-circle-notch fa-stack-2x"></i>
+                    <i className="circle-rotate-slow fab fa-chrome fa-stack-1x"></i>
+                  </span>
+                  <label className="link">Website</label>
+                </a>
                 <a href="https://github.com/bert-bae" className="contact-text">
                   <span className="fa-stack">
                     <i className="circle-rotate fas fa-circle-notch fa-stack-2x"></i>
