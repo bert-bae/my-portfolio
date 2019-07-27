@@ -22,6 +22,7 @@
     "build": "react-scripts build",
     "sass": "sass --watch src/styles/index.scss:src/index.css",
     "test": "react-scripts test",
+    "dev": "npm run start && sass",
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build",
     "predeploy": "npm run build"

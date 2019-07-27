@@ -3,9 +3,10 @@ import { Col } from 'react-bootstrap';
 
 import DevSkills from './resume/DevSkills';
 import Experience from './resume/Experience';
+import Project from './resume/Project';
 
 import data from '../utils/data';
-import { workExperience, devSkills, volunteerExperience, education, interests, aboutMe, contactInfo } from '../utils/resumeData';
+import { workExperience, devSkills, volunteerExperience, education, interests, aboutMe, contactInfo, projects } from '../utils/resumeData';
 import Jumbotron from './Jumbotron';
 
 export default class Resume extends Component {
@@ -32,6 +33,11 @@ export default class Resume extends Component {
     const formatEducation = education.map((school, index) => {
       return (
         <Experience job={school} key={"school" + index}/>
+      )
+    })
+    const formatProjects = projects.map((project, index) => {
+      return (
+        <Project project={project} key={"project" + index}/>
       )
     })
     const formatInterests = interests.map((interest, index) => {
@@ -69,21 +75,21 @@ export default class Resume extends Component {
                   </span>
                   <label>{contactInfo.number}</label>
                 </p>
-                <a href="https://bert-bae.github.io/my-portfolio" className="contact-text">
+                <a href={contactInfo.website} target="_blank" className="contact-text">
                   <span className="fa-stack">
                     <i className="circle-rotate fas fa-circle-notch fa-stack-2x"></i>
                     <i className="circle-rotate-slow fab fa-chrome fa-stack-1x"></i>
                   </span>
                   <label className="link">Website</label>
                 </a>
-                <a href="https://github.com/bert-bae" className="contact-text">
+                <a href={contactInfo.github} target="_blank" className="contact-text">
                   <span className="fa-stack">
                     <i className="circle-rotate fas fa-circle-notch fa-stack-2x"></i>
                     <i className="circle-rotate-slow fab fa-github fa-stack-1x"></i>
                   </span>
                   <label className="link">GitHub Profile</label>
                 </a>
-                <a href="https://www.linkedin.com/in/bert92/" className="contact-text">
+                <a href={contactInfo.linkedin} target="_blank" className="contact-text">
                   <span className="fa-stack">
                     <i className="circle-rotate fas fa-circle-notch fa-stack-2x"></i>
                     <i className="circle-rotate-slow fab fa-linkedin-in fa-stack-1x"></i>
@@ -106,6 +112,10 @@ export default class Resume extends Component {
           <Col className="subsection bs-column" lg={12} sm={12}>
             <h1 className="subheader">Experiences</h1>
             {formatWorkExp}
+          </Col>
+          <Col className="subsection bs-column" lg={12} sm={12}>
+            <h1 className="subheader">Projects</h1>
+            {formatProjects}
           </Col>
           <Col className="subsection bs-column" lg={12} sm={12}>
             <h1 className="subheader">Volunteer Experience</h1>

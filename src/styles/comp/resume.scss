@@ -92,8 +92,19 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-end;
-      .job-title {
+      .job-title, .project-title {
         font-size: $contentheader;
+        .link-to-repo {
+          padding: 5px 10px;
+          background-color: rgba(255, 0, 0, 0.8);
+          font-size: $main-font-size;
+          color: #FFF;
+          border-radius: 8px;
+          &:hover {
+            background-color: red;
+            transition: all 0.3s;
+          }
+        }
       }
       .job-duration {
         font-size: $main-font-size;
@@ -109,6 +120,21 @@
     }
     .responsibilities-container {
       margin: 20px 0!important;
+    }
+
+    // Project details - resume
+    .project-details-container {
+      margin: 20px 0!important;
+      display: grid;
+      grid-template-columns: repeat(12, minmax(auto, 1fr));
+      grid-template-rows: repeat(1, minmax(auto, 1fr));
+      grid-gap: 15px;
+      .project-description {
+        grid-column: span 10;
+      }
+      .project-tech {
+        grid-column: span 2;
+      }
     }
   }
 }
@@ -150,6 +176,15 @@
       .responsibilities-container {
         margin: 20px 0!important;
       }
+      // Project details - resume
+      .project-details-container {
+        .project-description {
+          grid-column: span 8;
+        }
+        .project-tech {
+          grid-column: span 4;
+        }
+      }
     }
   }
 }
@@ -162,6 +197,17 @@
       .resume-contact {
         grid-template-columns: repeat(1, minmax(auto, 1fr));
         grid-template-rows: repeat(5, minmax(auto, 1fr));
+      }
+    }
+    // Project details - resume
+    .project-details-container {
+      grid-template-columns: repeat(1, minmax(auto, 1fr))!important;
+      grid-template-rows: repeat(2, minmax(fit-content, 1fr))!important;
+      .project-description {
+        grid-column: auto!important;
+      }
+      .project-tech {
+        grid-column: auto!important;
       }
     }
   }

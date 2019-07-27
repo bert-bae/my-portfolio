@@ -791,8 +791,19 @@ a {
   justify-content: space-between;
   align-items: flex-end;
 }
-.resume-container .resume-content .resume-header .job-title {
+.resume-container .resume-content .resume-header .job-title, .resume-container .resume-content .resume-header .project-title {
   font-size: 22px;
+}
+.resume-container .resume-content .resume-header .job-title .link-to-repo, .resume-container .resume-content .resume-header .project-title .link-to-repo {
+  padding: 5px 10px;
+  background-color: rgba(255, 0, 0, 0.8);
+  font-size: 14px;
+  color: #FFF;
+  border-radius: 8px;
+}
+.resume-container .resume-content .resume-header .job-title .link-to-repo:hover, .resume-container .resume-content .resume-header .project-title .link-to-repo:hover {
+  background-color: red;
+  transition: all 0.3s;
 }
 .resume-container .resume-content .resume-header .job-duration {
   font-size: 14px;
@@ -807,6 +818,19 @@ a {
 }
 .resume-container .resume-content .responsibilities-container {
   margin: 20px 0 !important;
+}
+.resume-container .resume-content .project-details-container {
+  margin: 20px 0 !important;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(auto, 1fr));
+  grid-template-rows: repeat(1, minmax(auto, 1fr));
+  grid-gap: 15px;
+}
+.resume-container .resume-content .project-details-container .project-description {
+  grid-column: span 10;
+}
+.resume-container .resume-content .project-details-container .project-tech {
+  grid-column: span 2;
 }
 
 @media only screen and (max-width: 992px) {
@@ -841,6 +865,12 @@ a {
   .resume-container .resume-content .responsibilities-container {
     margin: 20px 0 !important;
   }
+  .resume-container .resume-content .project-details-container .project-description {
+    grid-column: span 8;
+  }
+  .resume-container .resume-content .project-details-container .project-tech {
+    grid-column: span 4;
+  }
 }
 @media only screen and (max-width: 568px) {
   .resume-container .resume-contact-grid {
@@ -850,6 +880,16 @@ a {
   .resume-container .resume-contact-grid .resume-contact {
     grid-template-columns: repeat(1, minmax(auto, 1fr));
     grid-template-rows: repeat(5, minmax(auto, 1fr));
+  }
+  .resume-container .project-details-container {
+    grid-template-columns: repeat(1, minmax(auto, 1fr)) !important;
+    grid-template-rows: repeat(2, minmax(fit-content, 1fr)) !important;
+  }
+  .resume-container .project-details-container .project-description {
+    grid-column: auto !important;
+  }
+  .resume-container .project-details-container .project-tech {
+    grid-column: auto !important;
   }
 }
 @media print {

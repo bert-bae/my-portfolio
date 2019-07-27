@@ -3,10 +3,36 @@ module.exports = {
     address: "3970 Carrigan Court, Burnaby, BC, V3N 4S5",
     email: "elbert.bae@gmail.com",
     number: "(778) 908-0350",
-    
+    website: "https://bert-bae.github.io/my-portfolio",
+    github: "https://github.com/bert-bae",
+    linkedin: "https://www.linkedin.com/in/bert92/",
   },
 
-  aboutMe: "Full-stack software developer working in the NodeJS environment with experience developing server-side and client-side web applications using libraries such as React, NextJS, EJS, Express, 3rd party APIs, and SQL databases. With my current knowledge around MVC architecture and program design, able to write clean and organized code, but always seeking more information to improve my capabilities. Significant experience in management, training, and sales with clear written and spoken communication skills between colleagues and clients mostly in problem resolution focused environments to achieve results.",
+  aboutMe: "Full-stack software developer working in the NodeJS environment with experience developing full-stack web applications in NodeJS using Javascript, EJS, Express, Objection, 3rd party APIs, and SQL databases. Experience building with React and NextJS in personal projects, but looking for industry experience to gain further knowledge about best practices. With my current knowledge around MVC architecture and program design, I am familiar with writing clean and scale-able code and always seeking more information to improve my capabilities. Significant experience in management, training, and sales with clear written and spoken communication skills between colleagues and clients mostly in problem resolution focused environments to achieve results.",
+
+  projects: [
+    {
+      title: "Happyr",
+      description: "Happyr is a mock site that helps users identify happy hour deals near them. It is a simple API, website, and future mobile application. Restaurants, bars, and pubs can easily list themselves for users to locate amazing deals nearby. Users can scan for nearby restaurants and bars that offer happy hour deals with one click using their geolocation information. The list will show the happy hour times, menus, prices, and a map for its location.\n\nThis is my current on-going project currently in development. Future work will include a homepage map view of all establishments, search by name or area functionality, and mobile application.",
+      techStack: ["React", "NextJS", "MySql", "Objection", "SaSS", "Express", "Knex"],
+      imgSrc: [],
+      projectUrl: "https://github.com/bert-bae/hapy_hr",
+    },
+    {
+      title: "NuBrew",
+      description: "NuBrew is an application that allows users to vote on their craft beer drinks and keep track of favorited drinks over time. As users expand their set of craft beers tried over time, the application will provide recommendations based on their previous likes based on IBU and category/style of drink. Of course, users need to be able to take that plunge and explore uncharted territories by trying something new by random as well, even if they really don't like that one style, taste changes over time!\n\nWe want to make it as easy as possible, so for those that bought their drinks with labels, the application was created while experimenting machine learning and label recognition using Google AutoML Vision.\n\nIn collaboration with Adam Romeo (https://adamromeo.dev/)",
+      techStack: ["React-Native", "PostgreSql", "Knex", "NodeJS", "Express",  "SaSS", "Google AutoML"],
+      imgSrc: ["images/projects/nubrew.png", "images/projects/nubrewExample.gif", "images/projects/nubrewExample2.gif"],
+      projectUrl: "https://github.com/bert-bae/nubrew",
+    },
+    {
+      title: "ChattyApp",
+      description: "This is a Chat application that was created as a part of Lighthouse Lab's program while learning and experimenting with React and Websockets. You can connect with others on the local network via websockets to have a conversation! Domain specific languages were implemented as experimentation as well as logic to allow emojis, images, and username modification.\n\nNot crazy, but interesting first step learning React with Websockets!",
+      techStack: ["NodeJS", "Javascript", "React", "Websockets", "Express",  "SaSS"],
+      imgSrc: ["images/projects/chatty1.png", "images/projects/chatty2.png", "images/projects/chatty3.png", "images/projects/chatty4.png"],
+      projectUrl: "https://github.com/bert-bae/chattyapp",
+    },
+  ],
 
   education: [
     {
@@ -101,6 +127,28 @@ module.exports = {
     },
     {
       name: 'AJAX', 
+      pieData: [{
+        value: 90,
+        color: "#F7464A",
+      },
+      {
+        value: 10,
+        color: "black",
+      }]
+    },
+    {
+      name: 'Flexbox', 
+      pieData: [{
+        value: 90,
+        color: "#F7464A",
+      },
+      {
+        value: 10,
+        color: "black",
+      }]
+    },
+    {
+      name: 'CSS-Grid', 
       pieData: [{
         value: 90,
         color: "#F7464A",
