@@ -2,16 +2,35 @@
   height: 100%;
   width: 100%;
   display: inline-block;
+  .name-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row-wrap;
+    margin-bottom: 25px;
+    .resume-name {
+      font-size: 36px;
+      margin: 0 15px 0 0;
+    }
+    .desired-title {
+      font-style: italic;
+      margin: 0 15px 0 0;
+    }
+    .download-resume {
+      margin: 0;
+      padding: 5px 10px;
+      background-color: rgba(255, 0, 0, 0.8);
+      font-size: 14px;
+      color: #fff;
+      border-radius: 8px;
+    }
+  }
   .mainheader {
     text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
     margin-bottom: 50px;
   }
   .subsection {
     margin-bottom: 50px;
-    .resume-name {
-      font-size: 36px;
-      margin-bottom: 25px;
-    }
     .subheader {
       border-bottom: 1px solid black;
     }
@@ -36,7 +55,7 @@
       grid-gap: 5px;
       padding: 5px 10px;
       .contact-text {
-        color: #FFF;
+        color: #fff;
         font-size: 12px;
         font-weight: bold;
         display: grid;
@@ -67,21 +86,8 @@
   }
 
   .skills-container {
-    display: flex;
-    flex-flow: row wrap;
-    width: 100%;
-    height: auto;
-    margin-top: 35px;
-    .dev-skill {
-      flex: 0 0 10%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      canvas {
-        margin: 10px;
-      }
-    }
+    display: grid;
+    grid-template-columns: repeat(4, minmax(auto, 1fr));
   }
 
   // Experiences section
@@ -92,13 +98,14 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-end;
-      .job-title, .project-title {
+      .job-title,
+      .project-title {
         font-size: $contentheader;
         .link-to-repo {
           padding: 5px 10px;
           background-color: rgba(255, 0, 0, 0.8);
           font-size: $main-font-size;
-          color: #FFF;
+          color: #fff;
           border-radius: 8px;
           &:hover {
             background-color: red;
@@ -119,12 +126,12 @@
       }
     }
     .responsibilities-container {
-      margin: 20px 0!important;
+      margin: 20px 0 !important;
     }
 
     // Project details - resume
     .project-details-container {
-      margin: 20px 0!important;
+      margin: 20px 0 !important;
       display: grid;
       grid-template-columns: repeat(12, minmax(auto, 1fr));
       grid-template-rows: repeat(1, minmax(auto, 1fr));
@@ -174,7 +181,7 @@
         }
       }
       .responsibilities-container {
-        margin: 20px 0!important;
+        margin: 20px 0 !important;
       }
       // Project details - resume
       .project-details-container {
@@ -185,6 +192,9 @@
           grid-column: span 4;
         }
       }
+    }
+    .skills-container {
+      grid-template-columns: repeat(2, minmax(auto, 1fr));
     }
   }
 }
@@ -201,14 +211,17 @@
     }
     // Project details - resume
     .project-details-container {
-      grid-template-columns: repeat(1, minmax(auto, 1fr))!important;
-      grid-template-rows: repeat(2, minmax(fit-content, 1fr))!important;
+      grid-template-columns: repeat(1, minmax(auto, 1fr)) !important;
+      grid-template-rows: repeat(2, minmax(fit-content, 1fr)) !important;
       .project-description {
-        grid-column: auto!important;
+        grid-column: auto !important;
       }
       .project-tech {
-        grid-column: auto!important;
+        grid-column: auto !important;
       }
+    }
+    .skills-container {
+      grid-template-columns: repeat(1, minmax(auto, 1fr));
     }
   }
 }
@@ -218,24 +231,27 @@
     margin: 0;
     color: #000;
     background-color: #fff;
-    padding: 0!important;
+    padding: 0 !important;
   }
   @page {
-    margin: 2cm!important;
+    margin: 2cm !important;
   }
   .contact-text {
-    color: black!important;
+    color: #fff !important;
   }
   .section-container {
-    padding: 0!important;    
+    padding: 0 !important;
   }
   #main-nav {
-    display: none!important;
+    display: none !important;
   }
   .footer-section {
-    display: none!important;
+    display: none !important;
   }
   .jumbotron-images {
-    display: none!important;
+    display: none !important;
+  }
+  .download-resume {
+    display: none !important;
   }
 }

@@ -704,16 +704,35 @@ a {
   width: 100%;
   display: inline-block;
 }
+.resume-container .name-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row-wrap;
+  margin-bottom: 25px;
+}
+.resume-container .name-container .resume-name {
+  font-size: 36px;
+  margin: 0 15px 0 0;
+}
+.resume-container .name-container .desired-title {
+  font-style: italic;
+  margin: 0 15px 0 0;
+}
+.resume-container .name-container .download-resume {
+  margin: 0;
+  padding: 5px 10px;
+  background-color: rgba(255, 0, 0, 0.8);
+  font-size: 14px;
+  color: #fff;
+  border-radius: 8px;
+}
 .resume-container .mainheader {
   text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
   margin-bottom: 50px;
 }
 .resume-container .subsection {
   margin-bottom: 50px;
-}
-.resume-container .subsection .resume-name {
-  font-size: 36px;
-  margin-bottom: 25px;
 }
 .resume-container .subsection .subheader {
   border-bottom: 1px solid black;
@@ -738,7 +757,7 @@ a {
   padding: 5px 10px;
 }
 .resume-container .resume-contact-grid .resume-contact .contact-text {
-  color: #FFF;
+  color: #fff;
   font-size: 12px;
   font-weight: bold;
   display: grid;
@@ -766,21 +785,8 @@ a {
   grid-column: span 9;
 }
 .resume-container .skills-container {
-  display: flex;
-  flex-flow: row wrap;
-  width: 100%;
-  height: auto;
-  margin-top: 35px;
-}
-.resume-container .skills-container .dev-skill {
-  flex: 0 0 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.resume-container .skills-container .dev-skill canvas {
-  margin: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(auto, 1fr));
 }
 .resume-container .resume-content {
   margin: 30px 10px;
@@ -791,17 +797,20 @@ a {
   justify-content: space-between;
   align-items: flex-end;
 }
-.resume-container .resume-content .resume-header .job-title, .resume-container .resume-content .resume-header .project-title {
+.resume-container .resume-content .resume-header .job-title,
+.resume-container .resume-content .resume-header .project-title {
   font-size: 22px;
 }
-.resume-container .resume-content .resume-header .job-title .link-to-repo, .resume-container .resume-content .resume-header .project-title .link-to-repo {
+.resume-container .resume-content .resume-header .job-title .link-to-repo,
+.resume-container .resume-content .resume-header .project-title .link-to-repo {
   padding: 5px 10px;
   background-color: rgba(255, 0, 0, 0.8);
   font-size: 14px;
-  color: #FFF;
+  color: #fff;
   border-radius: 8px;
 }
-.resume-container .resume-content .resume-header .job-title .link-to-repo:hover, .resume-container .resume-content .resume-header .project-title .link-to-repo:hover {
+.resume-container .resume-content .resume-header .job-title .link-to-repo:hover,
+.resume-container .resume-content .resume-header .project-title .link-to-repo:hover {
   background-color: red;
   transition: all 0.3s;
 }
@@ -871,6 +880,9 @@ a {
   .resume-container .resume-content .project-details-container .project-tech {
     grid-column: span 4;
   }
+  .resume-container .skills-container {
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
+  }
 }
 @media only screen and (max-width: 568px) {
   .resume-container .resume-contact-grid {
@@ -891,6 +903,9 @@ a {
   .resume-container .project-details-container .project-tech {
     grid-column: auto !important;
   }
+  .resume-container .skills-container {
+    grid-template-columns: repeat(1, minmax(auto, 1fr));
+  }
 }
 @media print {
   body {
@@ -904,7 +919,7 @@ a {
     margin: 2cm !important;
   }
   .contact-text {
-    color: black !important;
+    color: #fff !important;
   }
 
   .section-container {
@@ -920,6 +935,10 @@ a {
   }
 
   .jumbotron-images {
+    display: none !important;
+  }
+
+  .download-resume {
     display: none !important;
   }
 }
